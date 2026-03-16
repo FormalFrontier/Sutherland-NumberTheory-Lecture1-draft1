@@ -133,70 +133,100 @@ All Phase 2 stages completed on 2026-03-16. This phase produced the dependency g
 ## Phase 3: Formalization — In Progress
 
 ### Stage 3.1: Lean Scaffolding
-**Status:** In progress (Batch 1-2 complete, Batches 3-5 planned)
+**Status:** Complete
+**Date:** 2026-03-16
+**Notes:** All 27 formalizable items scaffolded across 5 batches.
+
+| PR | Batch | Items |
+|----|-------|-------|
+| #67 | Batch 1-2 | Defs 1.2, 1.6, 1.7, 1.17, 1.19; Ex 1.3; Lemma 1.4; Cor 1.5; Props 1.18, 1.28 |
+| #69 | Batch 3 | Thm 1.8; Defs 1.10, 1.11; Prop 1.20; Cor 1.21 |
+| #73 | Batch 4 | Defs 1.12, 1.13; Exs 1.14, 1.15; Thm 1.16; Props 1.22, 1.25; Cor 1.23 |
+| #93 | Batch 5 | Def 1.26; Thm 1.9; Ex 1.24; Ex 1.29 |
+
+### Stage 3.2: Proof Filling
+**Status:** In progress — 26/27 sorry-free (96%)
 **Date started:** 2026-03-16
 
-**Batch 1-2 (PR #67, merged):** 10 sorry'd Lean files created under `SutherlandNumberTheoryLecture1/Chapter1/`:
-- `Definition1_2.lean` — Absolute value, nonarchimedean
-- `Example1_3.lean` — Trivial absolute value
-- `Lemma1_4.lean` — Nonarchimedean characterization
-- `Corollary1_5.lean` — Positive characteristic implies nonarchimedean
-- `Definition1_6.lean` — Equivalence of absolute values
-- `Definition1_7.lean` — p-adic absolute value
-- `Definition1_17.lean` — Integral elements
-- `Proposition1_18.lean` — Integral closure properties
-- `Definition1_19.lean` — Integral closure, integrally closed
-- `Proposition1_28.lean` — Minimal polynomial integrality criterion
+**Proof filling PRs:**
 
-**Remaining scaffolding (planned issues):**
-- Issue #64 (Batch 3): Theorem 1.8, Definition 1.10, Definition 1.11, Proposition 1.20, Corollary 1.21 — blocked on #62 (now closed)
-- Issue #65 (Batch 4): Definition 1.12, Definition 1.13, Example 1.14, Example 1.15, Theorem 1.16, Proposition 1.22, Corollary 1.23, Proposition 1.25
-- Issue #66 (Batch 5): Theorem 1.9, Example 1.24, Definition 1.26, Example 1.29
+| PR | Items | Strategy |
+|----|-------|----------|
+| #72 | Prop 1.18, Def 1.7, Ex 1.3 | Mathlib API wrappers |
+| #76 | Prop 1.20, Cor 1.21 | DVR properties via Mathlib |
+| #78 | Lemma 1.4, Cor 1.5 | Nonarchimedean tactic proofs |
+| #79 | Prop 1.22, Cor 1.23, Prop 1.25 | Integral closure via Mathlib |
+| #84 | Ex 1.14, Ex 1.15 | DVR examples — instance + computation |
+| #87 | Thm 1.8, Thm 1.16, Prop 1.28 | Theorem wrappers around Mathlib |
+| #95 | Def 1.26 | Number fields definition |
+| #96 | Ex 1.29 | Non-integral element — nlinarith + algebraic |
+| #100 | Ex 1.24 | Z[√5] not integrally closed — contradiction |
+
+**Remaining:** Theorem 1.9 (Product Formula) — the hardest item, in progress (issue #91).
 
 ### Item Progress Summary
 
 | Status | Count |
 |--------|-------|
-| `statement_formalized` | 10 |
-| `not_started` | 17 |
+| `sorry_free` | 26 |
+| `statement_formalized` | 1 |
 | `not_applicable` | 11 |
 | **Total** | **38** |
 
-10 of 27 formalizable items have sorry'd type signatures in Lean. 17 remain to be scaffolded before proof work begins.
+26 of 27 formalizable items are sorry-free. Only Theorem 1.9 remains.
 
-### Stages 3.2–3.3
-**Status:** Not started
-**Notes:** Proof formalization (Stage 3.2) and dependency trimming (Stage 3.3) await scaffolding completion.
+### Stage 3.3: Dependency Trimming
+**Status:** Blocked on Theorem 1.9 (issue #99)
+**Notes:** Will replace the conservative linear chain in `dependencies/internal.json` with actual Lean import-derived dependencies once all proofs are complete.
 
 ---
 
-## Merged PRs (since Phase 1 summary)
+## Merged PRs
 
-These PRs merged after the Phase 1 progress summary (PR #38, 2026-03-16):
+### Phase 2 (since Phase 1 summary)
 
 | PR | Title | Stage |
 |----|-------|-------|
-| #41 | Review: Verify structural foundation (items.json, blobs, internal deps) | QA |
+| #41 | Review: Verify structural foundation | QA |
 | #46 | Stage 2.2: External Dependency Analysis | 2.2 |
-| #47 | Review: Verify transcription quality for pages 1, 8, backmatter-1 | QA |
-| #50 | Initialize progress/items.json for item-level progress tracking | Infra |
+| #47 | Review: Verify transcription quality | QA |
+| #50 | Initialize progress/items.json | Infra |
 | #52 | Stage 2.5 + Meditate: Phase 1 reflection and skills | 2.5 |
-| #57 | Review: Verify and merge PR #52 (Meditate skills + command fix) | QA |
+| #57 | Review: Verify PR #52 | QA |
 | #60 | Stage 2.6: Readiness Report | 2.6 |
-| #51 | Stage 2.3 Blueprint Assembly + items.json init + Mathlib coverage | 2.3, 2.4 |
-| #61 | Review: Fix and merge PR #51 + fix #49 label | QA |
-| #63 | Stage 2.7: Reference Attachment — .refs.md files for all 27 items | 2.7 |
+| #51 | Stage 2.3 Blueprint Assembly + Mathlib coverage | 2.3, 2.4 |
+| #61 | Review: Fix and merge PR #51 | QA |
+| #63 | Stage 2.7: Reference Attachment | 2.7 |
+
+### Phase 3
+
+| PR | Title | Stage |
+|----|-------|-------|
 | #67 | Stage 3.1a: Lean Scaffolding — Batch 1-2 | 3.1 |
+| #69 | Stage 3.1b: Lean Scaffolding — Batch 3 | 3.1 |
+| #72 | Stage 3.2a: Easy Mathlib API Proofs | 3.2 |
+| #73 | Stage 3.1c: Lean Scaffolding — Batch 4 | 3.1 |
+| #76 | Stage 3.2c: Prop 1.20, Cor 1.21 | 3.2 |
+| #78 | Stage 3.2b: Nonarchimedean Proofs | 3.2 |
+| #79 | Stage 3.2d: IC Proofs (Prop 1.22, Cor 1.23, Prop 1.25) | 3.2 |
+| #83 | Fix items.json status for 6 definitions | Fix |
+| #84 | Stage 3.2e: DVR Example Proofs (Ex 1.14, 1.15) | 3.2 |
+| #87 | Stage 3.2f: Theorem Wrappers (Thm 1.8, 1.16, Prop 1.28) | 3.2 |
+| #88 | Review: Fix items.json for Defs 1.12, 1.13 | QA |
+| #93 | Stage 3.1d: Lean Scaffolding — Batch 5 | 3.1 |
+| #94 | Meditate: 3 proof strategy skills | Skills |
+| #95 | Stage 3.2g: Def 1.26 (Number Fields) | 3.2 |
+| #96 | Stage 3.2i: Ex 1.29 (Non-Integral Element) | 3.2 |
+| #98 | Review: Pre-Stage-3.3 compilation verification | QA |
+| #100 | Stage 3.2h: Ex 1.24 (Z[√5] Not Integrally Closed) | 3.2 |
 
 ## Open Issues
 
 | Issue | Title | Status |
 |-------|-------|--------|
-| #59 | Summarize: Phase 2 progress update | Claimed (this session) |
-| #62 | Stage 3.1a: Lean Scaffolding — Batch 1-2 | Closed (PR #67 merged) |
-| #64 | Stage 3.1b: Lean Scaffolding — Batch 3 | Unclaimed (was blocked on #62, now unblocked) |
-| #65 | Stage 3.1c: Lean Scaffolding — Batch 4 | Unclaimed |
-| #66 | Stage 3.1d: Lean Scaffolding — Batch 5 | Unclaimed |
+| #91 | Stage 3.2j: Theorem 1.9 (Product Formula) | Claimed — in progress |
+| #99 | Stage 3.3: Dependency Trimming | Unclaimed — blocked on #91 |
+| #101 | Review: Stage 3.2 Completion Gate | Unclaimed — blocked on #91 |
 
 ## Infrastructure and Skills
 
@@ -213,11 +243,12 @@ These PRs merged after the Phase 1 progress summary (PR #38, 2026-03-16):
 - `acquiring-skills` — create or update Claude Code skills
 - `ci-troubleshooting` — diagnostic steps for CI failures
 - `parallel-agent-coordination` — best practices for avoiding merge conflicts
+- `lean-proof-strategies` — strategies for filling sorry placeholders
+- `mathlib-api-lookup` — searching for Mathlib declarations
+- `aristotle-escalation` — automated theorem prover escalation
 
 ## Limitations and Gaps
 
-- **`research/external-sources.json` missing:** Stage 2.5 closed without delivering this file. Impact is low — `mathlib-coverage.json` and `external-coverage.json` contain the information needed for formalization.
-- **Dependencies are still conservative:** The linear chain in `dependencies/internal.json` is a placeholder. Actual mathematical dependencies will be determined in Stage 3.3 after formalization.
-- **Blueprint HTML not in CI:** The leanblueprint HTML graph can be built locally but is not part of CI. LeanArchitect integration awaits Stage 3.1 completion (needs compiled .olean files).
-- **17 items not yet scaffolded:** Batches 3–5 (issues #64–#66) cover the remaining 17 formalizable items. These include the 3 hardest items (Theorem 1.9, Examples 1.24 and 1.29).
-- **No proofs formalized yet:** All 10 scaffolded items contain `sorry`. Proof work (Stage 3.2) has not begun.
+- **Theorem 1.9 (Product Formula):** The sole remaining sorry — hardest theorem in the lecture, likely needs Aristotle escalation.
+- **Dependencies still conservative:** The linear chain in `dependencies/internal.json` is a placeholder. Stage 3.3 (#99) will replace it with actual dependencies once all proofs are complete.
+- **Blueprint HTML not in CI:** The leanblueprint HTML graph can be built locally but is not part of CI.

@@ -189,3 +189,17 @@ theorem foo ... := by
 4. **Finset sum manipulation**: For sums over `Finset.range`, the key lemmas are `Finset.sum_le_sum` (pointwise), `Finset.sum_const` + `Finset.card_range` (constant sums), and `nsmul_eq_mul` (converting nsmul to multiplication).
 
 5. **Power arithmetic**: When you need `i + (n - i) = n`, use `omega` after `Finset.mem_range`. For `pow_add` rewriting, use `← pow_add` then `congr 1; omega`.
+
+6. **FractionRing equalities via denominator clearing**: To prove `f(a/b) = 0` in a FractionRing, don't use `field_simp` or hunt for `div_sub_div` lemmas. Instead:
+   - Get `a/b * b = a` via `div_mul_cancel₀`
+   - Derive needed products (e.g., `(a/b)^2 * b^2 = a^2`) using `calc ... = (a/b * b)^2 := by ring; _ = a^2 := by rw [hφb]`
+   - Combine with `linear_combination` to show `goal * b^n = 0`
+   - Conclude with `(mul_eq_zero.mp key).resolve_right (pow_ne_zero n hb_ne)`
+
+7. **`Polynomial.degree` vs `natDegree`**: These are different types (`WithBot ℕ` vs `ℕ`). Key API distinction:
+   - `Monic.sub_of_left` uses `degree` (not `natDegree`)
+   - Use `Polynomial.degree_X`, `Polynomial.degree_one` for `degree` goals
+   - Use `Polynomial.natDegree_X`, `Polynomial.natDegree_one` for `natDegree` goals
+   - Don't mix them — `linarith`/`omega` can't bridge the type gap
+
+8. **`R[X]` notation with subtypes**: `(↥S)[X]` can cause parsing issues where `X` is treated as an identifier. Use `Polynomial ↥S` explicitly instead.
