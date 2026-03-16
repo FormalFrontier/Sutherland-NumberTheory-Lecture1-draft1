@@ -15,7 +15,7 @@ namespace SutherlandNumberTheoryLecture1.Chapter1
 This follows from the transitivity of integrality (Proposition 1.20). -/
 theorem integralClosure_isIntegrallyClosedIn
     (A B : Type*) [CommRing A] [CommRing B] [Algebra A B] :
-    IsIntegrallyClosedIn (integralClosure A B) B := by
-  sorry
+    IsIntegrallyClosedIn (integralClosure A B) B :=
+  inferInstance
 
 end SutherlandNumberTheoryLecture1.Chapter1

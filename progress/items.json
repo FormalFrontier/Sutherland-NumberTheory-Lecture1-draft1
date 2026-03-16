@@ -184,14 +184,14 @@
   {
     "id": "Lecture1/Proposition1.20",
     "type": "proposition",
-    "status": "statement_formalized",
+    "status": "sorry_free",
     "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Proposition1_20.lean",
     "aristotle_project_id": ""
   },
   {
     "id": "Lecture1/Corollary1.21",
     "type": "corollary",
-    "status": "statement_formalized",
+    "status": "sorry_free",
     "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Corollary1_21.lean",
     "aristotle_project_id": ""
   },
