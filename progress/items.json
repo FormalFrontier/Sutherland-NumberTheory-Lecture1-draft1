@@ -37,14 +37,14 @@
   {
     "id": "Lecture1/Lemma1.4",
     "type": "lemma",
-    "status": "statement_formalized",
+    "status": "sorry_free",
     "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Lemma1_4.lean",
     "aristotle_project_id": ""
   },
   {
     "id": "Lecture1/Corollary1.5",
     "type": "corollary",
-    "status": "statement_formalized",
+    "status": "sorry_free",
     "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Corollary1_5.lean",
     "aristotle_project_id": ""
   },
