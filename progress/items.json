@@ -79,7 +79,7 @@
   {
     "id": "Lecture1/Theorem1.9",
     "type": "theorem",
-    "status": "statement_formalized",
+    "status": "sorry_free",
     "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Theorem1_9.lean",
     "aristotle_project_id": ""
   },
