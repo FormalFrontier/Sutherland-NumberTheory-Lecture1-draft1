@@ -1,0 +1,2 @@
+**Remark 1.27.** The notation $\mathbb{Z}_K$ is also sometimes used to denote the ring of integers of $K$. The symbol $\mathcal{O}$ emphasizes the fact that $\mathcal{O}_K$ is an *order* in $K$; in any $\mathbb{Q}$-algebra $K$ of finite dimension $r$, an order is a subring of $K$ that is also a free $\mathbb{Z}$-module of rank $r$, equivalently, a $\mathbb{Z}$-lattice in $K$ that is also a ring. In fact, $\mathcal{O}_K$ is the *maximal order* of $K$: it contains every order in $K$.
+
