@@ -247,7 +247,7 @@
   {
     "id": "Lecture1/Example1.29",
     "type": "example",
-    "status": "statement_formalized",
+    "status": "sorry_free",
     "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Example1_29.lean",
     "aristotle_project_id": ""
   },
