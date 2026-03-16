@@ -25,12 +25,12 @@ example (p : ℕ) [Fact (Nat.Prime p)] : ℚ → ℚ := padicNorm p
 
 /-- The p-adic norm satisfies |x|_p = 0 iff x = 0. -/
 theorem padicNorm_eq_zero_iff (p : ℕ) [Fact (Nat.Prime p)] (q : ℚ) :
-    padicNorm p q = 0 ↔ q = 0 := by
-  sorry
+    padicNorm p q = 0 ↔ q = 0 :=
+  IsAbsoluteValue.abv_eq_zero (padicNorm p)
 
 /-- The p-adic norm is nonarchimedean: |x + y|_p ≤ max(|x|_p, |y|_p). -/
 theorem padicNorm_nonarchimedean (p : ℕ) [Fact (Nat.Prime p)] (q r : ℚ) :
-    padicNorm p (q + r) ≤ max (padicNorm p q) (padicNorm p r) := by
-  sorry
+    padicNorm p (q + r) ≤ max (padicNorm p q) (padicNorm p r) :=
+  padicNorm.nonarchimedean
 
 end SutherlandNumberTheoryLecture1.Chapter1
