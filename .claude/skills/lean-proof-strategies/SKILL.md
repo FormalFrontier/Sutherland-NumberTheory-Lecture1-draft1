@@ -138,7 +138,71 @@ theorem main ... := by
 - `Real.exists_natCast_add_one_lt_pow_of_one_lt` — finding large enough n
 - `le_of_pow_le_pow_left₀` — extracting base inequality from power inequality
 
-### 8. Polynomial Lifting (15-30 lines)
+### 8. Contradiction via Integrality Closure (30-65 lines)
+
+**When to try**: The goal is to show an element is NOT integral, or that a ring is NOT integrally closed. The proof constructs a specific element and derives a contradiction from assuming integrality.
+
+**Pattern**:
+```lean
+theorem foo : ¬ IsIntegrallyClosed R := by
+  rw [not_isIntegrallyClosed_iff]
+  refine ⟨specific_element, ?_, ?_⟩
+  · -- Show it's integral (e.g., root of X^2 - X - 1)
+    exact ⟨X^2 - X - 1, monic_proof, eval_proof⟩
+  · -- Show it's NOT in R (contradiction via algebraic computation)
+    intro ⟨r, hr⟩
+    -- Derive contradiction: e.g., show r would need to be rational but isn't
+    ...
+```
+
+**Real examples**:
+- **Example 1.24 (Z[sqrt(5)] not IC)**: 139 lines. Shows (1+sqrt(5))/2 is integral over Z but not in Z[sqrt(5)]. Uses `Algebra.adjoin_induction` to characterize elements of Z[sqrt(5)], then derives contradiction via irrationality of sqrt(5).
+- **Example 1.29 (Non-integral element)**: 64 lines. Shows (1+sqrt(7))/2 is not integral by assuming integrality, deriving its conjugate is also integral (closure under subtraction), computing their product = -3/2, and showing -3/2 cannot be in Z.
+
+**Key Mathlib APIs**:
+- `IsIntegrallyClosed`, `isIntegrallyClosed_iff`, `not_isIntegrallyClosed_iff`
+- `IsIntegral`, `IsIntegral.mul`, `IsIntegral.sub` — integral closure properties
+- `Algebra.adjoin_induction` — structural induction on adjoined elements
+- `irrational_sqrt_natCast_iff` — irrationality of square roots
+- `IsIntegrallyClosed.isIntegral_iff` — characterization via base ring membership
+
+**Pattern for "not in subring" proofs**: Use `Algebra.adjoin_induction` to decompose elements into generators, show the target element can't have that form (typically via irrationality or parity arguments).
+
+**Pattern for "not integral" proofs**: Assume integral, derive conjugate is integral too (closure), compute their product/sum to get a rational number, show it can't be in Z.
+
+### 9. Product Decomposition over Primes (60-120 lines)
+
+**When to try**: The proof involves a product or sum indexed over all primes (or prime factors), typically requiring decomposition by coprimality or factorization.
+
+**Pattern**:
+```lean
+-- Helper: establish product over prime factors equals the original
+private lemma fta_prod ... := by
+  have h_factorization := Nat.factorization_prod_pow_eq_self hn
+  ...
+
+-- Main theorem: decompose product, apply helper to num/den separately
+theorem product_formula ... := by
+  obtain ⟨a, b, hab, hb_pos, hq⟩ := Rat.reduced_form hq_ne
+  -- Split product over primes dividing a vs primes dividing b
+  have h_disjoint : Disjoint a.natAbs.primeFactors b.natAbs.primeFactors := ...
+  -- Combine using coprimality
+  calc prod = prod_a * prod_b := by ...
+    _ = ... := by rw [fta_prod ...]
+```
+
+**Real example**: Theorem 1.9 (Product Formula) — 113 lines. Proves `|q|_inf * prod_p |q|_p = 1` by decomposing the rational `q = a/b` into prime factors of numerator and denominator, using coprimality of the reduced form.
+
+**Key Mathlib APIs**:
+- `Nat.primeFactors`, `Nat.factorization_prod_pow_eq_self` — FTA infrastructure
+- `padicNorm.eq_zpow_of_nonzero`, `padicValRat`, `padicValInt` — p-adic norm/valuation
+- `Rat.reduced` — coprimality of reduced rational form
+- `Finset.prod_congr`, `Finset.prod_inv_distrib` — product manipulation
+- `zpow_neg`, `zpow_natCast` — integer power algebra
+
+**Key difficulty**: Managing the interplay between `Nat.primeFactors` (which works with `Nat`) and `padicValRat` (which works with `Rat`). Use `padicValRat.defn` and `padicValInt` to bridge.
+
+### 10. Polynomial Lifting (15-30 lines)
 
 **When to try**: The proof involves showing a polynomial over K actually has coefficients in a subring A, or transferring polynomial properties across ring extensions.
 
@@ -203,3 +267,14 @@ theorem foo ... := by
    - Don't mix them — `linarith`/`omega` can't bridge the type gap
 
 8. **`R[X]` notation with subtypes**: `(↥S)[X]` can cause parsing issues where `X` is treated as an identifier. Use `Polynomial ↥S` explicitly instead.
+
+9. **`Algebra.adjoin_induction` requires careful setup**: When proving properties of elements in `Algebra.adjoin R S`, the induction gives cases for generators, `algebraMap` elements, addition, and multiplication. You often need to carry an invariant through all four cases. Use `Algebra.adjoin_induction` with an explicit motive that captures the property you need.
+
+10. **Counterexample proofs need explicit witnesses**: When proving `¬ P`, you typically need `intro h` followed by deriving `False`. For "not integrally closed" proofs, the witness is a specific element — construct it explicitly rather than using `use` with complicated terms. Example: for Z[sqrt(5)], the witness is `(1 + sqrt 5) / 2` — compute this as a concrete `FractionRing` element.
+
+11. **`linear_combination` for algebraic contradictions**: When a counterexample proof reduces to showing two algebraic expressions are equal (or that an equation has no solution), `linear_combination` is often cleaner than `ring` + `linarith`. It handles the algebraic manipulation in one step. Example from Ex 1.29: showing the product of conjugates equals -3/2.
+
+12. **`Nat.primeFactors` and `Finset.prod` interaction**: When working with products over prime factors, the key bridge lemmas are:
+    - `Nat.factorization_prod_pow_eq_self` — reconstructs n from its factorization
+    - `Finsupp.prod` vs `Finset.prod` — the factorization is a `Finsupp`, convert via `Finsupp.prod_of_support_subset`
+    - `Nat.primeFactors` = `n.factorization.support` — they're definitionally equal

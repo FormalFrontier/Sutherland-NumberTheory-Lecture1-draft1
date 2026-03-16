@@ -123,6 +123,18 @@ haveI : Fact (Nat.Prime p) := ⟨hprime⟩
 haveI : (Ideal.span {(p : Z)}).IsMaximal := ...
 ```
 
+## Additional Search Terms from Final Sprint
+
+| Math concept | Mathlib search terms |
+|-------------|---------------------|
+| Prime factorization | `Nat.primeFactors`, `Nat.factorization`, `Nat.factorization_prod_pow_eq_self` |
+| p-adic valuation of rationals | `padicValRat.defn`, `padicValInt`, `padicNorm.eq_zpow_of_nonzero` |
+| Coprimality (reduced rationals) | `Rat.reduced`, `Rat.num_div_den`, `Int.Coprime` |
+| Adjoin (ring extension) | `Algebra.adjoin`, `Algebra.adjoin_induction`, `Algebra.subset_adjoin` |
+| Irrationality | `irrational_sqrt_natCast_iff`, `Nat.Prime.irrational_sqrt` |
+| Integral element operations | `IsIntegral.mul`, `IsIntegral.sub`, `IsIntegral.add` |
+| Not integrally closed | `not_isIntegrallyClosed_iff` (may need to construct manually) |
+
 ## Common Gotchas
 
 ### 1. Name Collisions
