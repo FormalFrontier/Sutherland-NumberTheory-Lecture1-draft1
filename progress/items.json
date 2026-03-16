@@ -30,7 +30,7 @@
   {
     "id": "Lecture1/Example1.3",
     "type": "example",
-    "status": "statement_formalized",
+    "status": "sorry_free",
     "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Example1_3.lean",
     "aristotle_project_id": ""
   },
@@ -65,7 +65,7 @@
   {
     "id": "Lecture1/Definition1.7",
     "type": "definition",
-    "status": "statement_formalized",
+    "status": "sorry_free",
     "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Definition1_7.lean",
     "aristotle_project_id": ""
   },
@@ -170,7 +170,7 @@
   {
     "id": "Lecture1/Proposition1.18",
     "type": "proposition",
-    "status": "statement_formalized",
+    "status": "sorry_free",
     "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Proposition1_18.lean",
     "aristotle_project_id": ""
   },
