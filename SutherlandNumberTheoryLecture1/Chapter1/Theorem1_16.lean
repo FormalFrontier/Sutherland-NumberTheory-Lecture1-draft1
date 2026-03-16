@@ -1,6 +1,7 @@
 import Mathlib.RingTheory.DiscreteValuationRing.TFAE
 import Mathlib.RingTheory.Valuation.ValuationRing
 import Mathlib.RingTheory.DedekindDomain.Basic
+import Mathlib.LinearAlgebra.Dimension.Finrank
 
 /-!
 # Theorem 1.16: Equivalent Characterizations of DVRs
@@ -20,21 +21,33 @@ In Mathlib, this is `IsDiscreteValuationRing.TFAE` (for Noetherian local domains
 that are not fields) and `tfae_of_isNoetherianRing_of_isLocalRing_of_isDomain`.
 -/
 
+open Module
+
 namespace SutherlandNumberTheoryLecture1.Chapter1
 
 /-- Theorem 1.16: Equivalent characterizations of DVRs.
 A Noetherian local domain that is not a field is a DVR if and only if it
-satisfies any of the equivalent conditions in `IsDiscreteValuationRing.TFAE`. -/
+satisfies any of the equivalent conditions in `IsDiscreteValuationRing.TFAE`.
+
+The TFAE list matches Mathlib's `IsDiscreteValuationRing.TFAE`:
+0. `A` is a DVR
+1. `A` is a valuation ring
+2. `A` is a Dedekind domain
+3. `A` is integrally closed with a unique nonzero prime ideal
+4. The maximal ideal is principal
+5. `dimₖ m/m² = 1`
+6. Every nonzero ideal is a power of the maximal ideal -/
 theorem dvr_tfae (A : Type*) [CommRing A] [IsDomain A]
     [IsNoetherianRing A] [IsLocalRing A] (hA : ¬IsField A) :
     List.TFAE [
       IsDiscreteValuationRing A,
       ValuationRing A,
       IsDedekindDomain A,
-      IsIntegrallyClosed A ∧ ∃! p : Ideal A, p ≠ ⊥ ∧ p.IsPrime,
-      Submodule.IsPrincipal (IsLocalRing.maximalIdeal A),
-      IsLocalRing.maximalIdeal A ≠ ⊥ ∧ Submodule.IsPrincipal (IsLocalRing.maximalIdeal A)
-    ] := by
-  sorry
+      IsIntegrallyClosed A ∧ ∃! P : Ideal A, P ≠ ⊥ ∧ P.IsPrime,
+      (IsLocalRing.maximalIdeal A).IsPrincipal,
+      finrank (IsLocalRing.ResidueField A) (IsLocalRing.CotangentSpace A) = 1,
+      ∀ (I : Ideal A), I ≠ ⊥ → ∃ n : ℕ, I = IsLocalRing.maximalIdeal A ^ n
+    ] :=
+  IsDiscreteValuationRing.TFAE A hA
 
 end SutherlandNumberTheoryLecture1.Chapter1

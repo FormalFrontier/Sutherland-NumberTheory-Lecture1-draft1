@@ -1,5 +1,6 @@
 import Mathlib.FieldTheory.Minpoly.IsIntegrallyClosed
 import Mathlib.RingTheory.IntegralClosure.IntegrallyClosed
+import Mathlib.Algebra.Polynomial.Lifts
 
 /-!
 # Proposition 1.28: Minimal Polynomial Criterion for Integrality
@@ -28,6 +29,23 @@ theorem integral_iff_minpoly_over_base
     {α : L} (hα : IsIntegral K α) :
     IsIntegral A α ↔
       ∀ i, (minpoly K α).coeff i ∈ (algebraMap A K).range := by
-  sorry
+  constructor
+  · intro hAα
+    rw [show minpoly K α = (minpoly A α).map (algebraMap A K) from
+      minpoly.isIntegrallyClosed_eq_field_fractions' (R := A) (S := L) (K := K) hAα]
+    intro i
+    simp [Polynomial.coeff_map]
+  · intro hcoeff
+    have hlifts : minpoly K α ∈ Polynomial.lifts (algebraMap A K) := by
+      rw [Polynomial.lifts_iff_coeff_lifts]
+      intro n
+      exact RingHom.mem_range.mp (hcoeff n)
+    obtain ⟨p, hp_map, _, hp_monic⟩ :=
+      Polynomial.lifts_and_degree_eq_and_monic hlifts (minpoly.monic hα)
+    refine ⟨p, hp_monic, ?_⟩
+    have h1 : Polynomial.aeval (R := A) α p = Polynomial.aeval (R := K) α (minpoly K α) := by
+      rw [← Polynomial.aeval_map_algebraMap K α p, hp_map]
+    rw [minpoly.aeval] at h1
+    exact_mod_cast h1
 
 end SutherlandNumberTheoryLecture1.Chapter1

@@ -72,7 +72,7 @@
   {
     "id": "Lecture1/Theorem1.8",
     "type": "theorem",
-    "status": "statement_formalized",
+    "status": "sorry_free",
     "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Theorem1_8.lean",
     "aristotle_project_id": ""
   },
@@ -149,7 +149,7 @@
   {
     "id": "Lecture1/Theorem1.16",
     "type": "theorem",
-    "status": "statement_formalized",
+    "status": "sorry_free",
     "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Theorem1_16.lean",
     "aristotle_project_id": ""
   },
@@ -240,7 +240,7 @@
   {
     "id": "Lecture1/Proposition1.28",
     "type": "proposition",
-    "status": "statement_formalized",
+    "status": "sorry_free",
     "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Proposition1_28.lean",
     "aristotle_project_id": ""
   },
