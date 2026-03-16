@@ -129,3 +129,13 @@ Based on the Stage 2.6 readiness report, these items are rated "Hard" with no di
 - **Example 1.29 (Non-integral element)**: Show (1+sqrt(7))/2 is not integral over Z by computing its minimal polynomial has non-integer coefficients.
 
 For these items, try 2 manual approaches first (see `lean-proof-strategies` skill), then escalate to Aristotle.
+
+## Retrospective: When Aristotle Was NOT Needed
+
+In the complete Sutherland Lecture 1 formalization (27/27 items sorry-free), **Aristotle was never used**. All 3 hard items were proved by Claude agents:
+
+- **Theorem 1.9**: Solved via product decomposition over prime factors (Strategy #9 in `lean-proof-strategies`). Key insight: separate numerator/denominator primes using coprimality of reduced form.
+- **Example 1.24**: Solved via `Algebra.adjoin_induction` + irrationality (Strategy #8). Key insight: characterize Z[sqrt(5)] elements structurally, then use irrationality for contradiction.
+- **Example 1.29**: Solved via conjugate integrality + algebraic computation (Strategy #8). Key insight: if x is integral, so is its conjugate; their product gives a rational that can't be in Z.
+
+**Updated heuristic**: Escalate after 2 genuinely different approaches fail AND the proof would require >80 lines. For proofs <80 lines, try a third approach — the issue is likely formalization strategy, not mathematical difficulty. Counterexample proofs (Strategy #8) are harder than they look but are still within Claude's reach if the algebraic structure is clear.
