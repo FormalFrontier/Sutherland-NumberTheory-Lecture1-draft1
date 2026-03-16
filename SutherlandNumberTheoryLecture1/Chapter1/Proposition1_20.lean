@@ -19,6 +19,6 @@ theorem integrality_trans {A B C : Type*}
     [Algebra A B] [Algebra B C] [Algebra A C] [IsScalarTower A B C]
     (hAB : Algebra.IsIntegral A B) (hBC : Algebra.IsIntegral B C) :
     Algebra.IsIntegral A C := by
-  sorry
+  have := hAB; have := hBC; exact Algebra.IsIntegral.trans B
 
 end SutherlandNumberTheoryLecture1.Chapter1
