@@ -14,14 +14,6 @@ name = "mathlib"
 scope = "leanprover-community"
 rev = "v4.28.0"
 
-[[require]]
-name = "LeanArchitect"
-git = "https://github.com/kim-em/LeanArchitect.git"
-rev = "blueprint-all"
-
-[[require]]
-name = "checkdecls"
-git = "https://github.com/PatrickMassot/checkdecls.git"
 
 [[lean_lib]]
 name = "SutherlandNumberTheoryLecture1"

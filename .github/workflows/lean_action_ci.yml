@@ -2,49 +2,15 @@ name: Lean Action CI
 
 on:
   push:
-    branches: [main]
   pull_request:
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
-  pages: write
-  id-token: write
-
-# Allow only one concurrent deployment
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v5
-
       - uses: leanprover/lean-action@v1
-
-      # Build LeanArchitect's extract_blueprint binary
-      - name: Build extract_blueprint
-        run: lake build LeanArchitect
-
-      # Extract blueprint from compiled Lean using LeanArchitect --all
-      - name: Extract blueprint data
-        run: |
-          find SutherlandNumberTheoryLecture1 -name '*.lean' | while read f; do
-            mod=$(echo "$f" | sed 's|/|.|g; s|\.lean$||')
-            lake env .lake/packages/LeanArchitect/.lake/build/bin/extract_blueprint \
-              single --all --json --build .lake/build "$mod"
-          done
-
-      # Generate content.tex with Lean annotations from LeanArchitect data
-      - name: Generate blueprint content
-        run: python3 scripts/generate_blueprint.py
-
-      # Build docs, blueprint, and deploy to Pages (with Mathlib doc caching)
-      - uses: leanprover-community/docgen-action@v1
-        with:
-          blueprint: true
-          build-page: false
