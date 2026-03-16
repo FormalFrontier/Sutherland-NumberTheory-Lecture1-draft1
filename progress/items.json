@@ -23,36 +23,36 @@
   {
     "id": "Lecture1/Definition1.2",
     "type": "definition",
-    "status": "not_started",
-    "lean_file": "",
+    "status": "statement_formalized",
+    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Definition1_2.lean",
     "aristotle_project_id": ""
   },
   {
     "id": "Lecture1/Example1.3",
     "type": "example",
-    "status": "not_started",
-    "lean_file": "",
+    "status": "statement_formalized",
+    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Example1_3.lean",
     "aristotle_project_id": ""
   },
   {
     "id": "Lecture1/Lemma1.4",
     "type": "lemma",
-    "status": "not_started",
-    "lean_file": "",
+    "status": "statement_formalized",
+    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Lemma1_4.lean",
     "aristotle_project_id": ""
   },
   {
     "id": "Lecture1/Corollary1.5",
     "type": "corollary",
-    "status": "not_started",
-    "lean_file": "",
+    "status": "statement_formalized",
+    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Corollary1_5.lean",
     "aristotle_project_id": ""
   },
   {
     "id": "Lecture1/Definition1.6",
     "type": "definition",
-    "status": "not_started",
-    "lean_file": "",
+    "status": "statement_formalized",
+    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Definition1_6.lean",
     "aristotle_project_id": ""
   },
   {
@@ -65,8 +65,8 @@
   {
     "id": "Lecture1/Definition1.7",
     "type": "definition",
-    "status": "not_started",
-    "lean_file": "",
+    "status": "statement_formalized",
+    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Definition1_7.lean",
     "aristotle_project_id": ""
   },
   {
@@ -163,22 +163,22 @@
   {
     "id": "Lecture1/Definition1.17",
     "type": "definition",
-    "status": "not_started",
-    "lean_file": "",
+    "status": "statement_formalized",
+    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Definition1_17.lean",
     "aristotle_project_id": ""
   },
   {
     "id": "Lecture1/Proposition1.18",
     "type": "proposition",
-    "status": "not_started",
-    "lean_file": "",
+    "status": "statement_formalized",
+    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Proposition1_18.lean",
     "aristotle_project_id": ""
   },
   {
     "id": "Lecture1/Definition1.19",
     "type": "definition",
-    "status": "not_started",
-    "lean_file": "",
+    "status": "statement_formalized",
+    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Definition1_19.lean",
     "aristotle_project_id": ""
   },
   {
@@ -240,8 +240,8 @@
   {
     "id": "Lecture1/Proposition1.28",
     "type": "proposition",
-    "status": "not_started",
-    "lean_file": "",
+    "status": "statement_formalized",
+    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Proposition1_28.lean",
     "aristotle_project_id": ""
   },
   {
