@@ -501,8 +501,8 @@ Record the initial candidate list with a brief justification for each entry.
 #### Phase 2: Deep Mathlib research
 
 For each candidate, search the **local Mathlib source** (`.lake/packages/mathlib/`) for
-closely related results. Use `Grep` and `Read` — do NOT use WebFetch. For thoroughness,
-use Opus subagents, one per candidate, running in parallel.
+closely related results. Use `Grep` and `Read` — do NOT use WebFetch. Open one GitHub
+issue per candidate to track the research and verdict.
 
 For each candidate, determine:
 1. Is the result already in Mathlib, possibly under a different name or with different type
