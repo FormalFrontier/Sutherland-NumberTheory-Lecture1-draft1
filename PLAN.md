@@ -475,6 +475,93 @@ Polish every non-trivial sorry-free proof to Mathlib quality. Open one GitHub is
 
 **Verify:** `lake build` produces zero linter warnings. Every `proof-polish` issue is closed.
 
+### Stage 3.5: Upstreaming Analysis
+
+Identify formalized results that may be worth contributing to Mathlib or related libraries.
+The output is a non-binding `UPSTREAMING.md` report — no actual upstreaming happens here.
+
+#### Criteria
+
+Include only results with **proofs genuinely new to Mathlib**. Exclude:
+- Items whose proof is a one-line call to an existing Mathlib declaration (pure wrappers)
+- Items that combine two or three Mathlib facts with trivial glue
+- Items where the proof quality, generality, or formulation is not at Mathlib level
+
+#### Phase 1: Lightweight triage
+
+Scan all sorry-free, proof-polished items. For each, make an initial judgment:
+
+- **Reject immediately** if the proof in the Lean file is a one-liner delegating to a named
+  Mathlib theorem — it's already in Mathlib.
+- **Keep as candidate** if the proof is substantive and the result feels absent from Mathlib's
+  API.
+
+Record the initial candidate list with a brief justification for each entry.
+
+#### Phase 2: Deep Mathlib research
+
+For each candidate, search the **local Mathlib source** (`.lake/packages/mathlib/`) for
+closely related results. Use `Grep` and `Read` — do NOT use WebFetch. For thoroughness,
+use Opus subagents, one per candidate, running in parallel.
+
+For each candidate, determine:
+1. Is the result already in Mathlib, possibly under a different name or with different type
+   class assumptions? (Check related files carefully — not just exact name matches.)
+2. Is there a close relative in Mathlib such that the candidate is just a straightforward
+   corollary or type-class variant?
+3. Is the proof approach genuinely new, or does it reconstruct something Mathlib already
+   proves elsewhere?
+
+Based on the research, assign one of three verdicts:
+
+- **Reject — insufficient interest:** The result is too narrow, the proof quality doesn't
+  meet Mathlib standards, or it's not a good fit.
+- **Reject — already in Mathlib:** Found an equivalent result. Create a GitHub issue to
+  refactor the proof to use the Mathlib declaration directly, and update the item's
+  `progress/items.json` status to `mathlib_covered`.
+- **Include in UPSTREAMING.md:** Genuinely new to Mathlib, correct, and at appropriate
+  generality and quality.
+
+#### Phase 3: Write UPSTREAMING.md
+
+Write `UPSTREAMING.md` at the repository root with the following structure:
+
+```markdown
+# Upstreaming Candidates
+
+These are suggestions only — no actual upstreaming has occurred.
+
+## Included
+
+### <Item ID> — `theorem_name`
+
+**File:** `path/to/Item.lean`
+
+**Statement:** (the Lean statement)
+
+**Why it's new:** What was searched, what was found, why this is absent.
+
+**Suggested home:** Which Mathlib file/module it belongs in.
+
+## Excluded
+
+### <Item ID> — reason
+
+One-line reason (already in Mathlib as `FooBar.baz`, too narrow, etc.).
+```
+
+#### Output
+
+- `UPSTREAMING.md` at the repository root
+- GitHub issues for any items whose proofs should be refactored to use Mathlib directly
+- `progress/items.json` updated with `"upstreaming_status"` field:
+  - `"candidate"` — included in UPSTREAMING.md
+  - `"mathlib_covered"` — already in Mathlib, refactor issue opened
+  - `"rejected"` — not a candidate
+
+**Verify:** `UPSTREAMING.md` exists. Every proof-polished item has an `upstreaming_status`
+in `progress/items.json`.
+
 ---
 
 ## Progress Tracking
