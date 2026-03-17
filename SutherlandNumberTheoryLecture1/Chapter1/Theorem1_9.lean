@@ -1,5 +1,6 @@
 import Mathlib.NumberTheory.Padics.PadicNorm
 import Mathlib.Data.Nat.Factorization.Basic
+import Mathlib.Algebra.BigOperators.Finprod
 
 /-!
 # Theorem 1.9: Product Formula
@@ -108,5 +109,26 @@ theorem product_formula (q : ℚ) (hq : q ≠ 0) :
   -- Step 5: Combine
   rw [habs, hprod_a, hprod_b, mul_comm (a : ℚ)⁻¹ (b : ℚ), ← mul_assoc,
       div_mul_cancel₀ _ hb', mul_inv_cancel₀ ha']
+
+/-- Theorem 1.9 (Product Formula, all-primes form): For any nonzero rational q,
+  |q| · ∏ᶠ p ∈ {p : ℕ | p.Prime}, |q|_p = 1.
+The finprod ranges over all primes; since |q|_p = 1 for all but finitely many p,
+the product is well-defined. -/
+theorem product_formula_all_primes (q : ℚ) (hq : q ≠ 0) :
+    |q| * ∏ᶠ (p : ℕ) (_ : p.Prime), padicNorm p q = 1 := by
+  -- The finprod over primes equals the finite product over primeFactors
+  have h_eq : ∏ᶠ (p : ℕ) (_ : p.Prime), padicNorm p q =
+      ∏ p ∈ (q.num.natAbs * q.den).primeFactors, padicNorm p q := by
+    apply finprod_mem_eq_prod_of_subset
+    · -- {p | Prime p} ∩ mulSupport (padicNorm · q) ⊆ ↑primeFactors
+      intro p hp
+      simp only [Set.mem_inter_iff, Function.mem_mulSupport] at hp
+      by_contra h_not_mem
+      exact hp.2 (padicNorm_eq_one_of_not_dvd q hq p hp.1 h_not_mem)
+    · -- ↑primeFactors ⊆ {p | Prime p}
+      intro p hp
+      exact Nat.prime_of_mem_primeFactors (Finset.mem_coe.mp hp)
+  rw [h_eq]
+  exact product_formula q hq
 
 end SutherlandNumberTheoryLecture1.Chapter1
