@@ -72,6 +72,16 @@ For each `proof-polish` issue:
 - [ ] Multi-step equalities/inequalities: consider `calc` blocks when intermediate steps clarify the argument
 - [ ] Tactic chains that chain logically (each step sets up the next) should be on separate lines rather than joined with `;`, except for trivially short patterns like `intro x; exact ...`
 
+## When to Delegate to Mathlib Instead of Polishing
+
+Before polishing a proof, check whether Mathlib already has the result. If so, **delegate** rather than polish — see the `mathlib-delegation` skill. Signs a proof should be delegated:
+
+- The proof reimplements something Mathlib provides (e.g., a custom `trivialAbsoluteValue` when `AbsoluteValue.trivial` exists)
+- The proof is long but follows a well-known mathematical pattern that Mathlib likely covers
+- The proof was written before the relevant Mathlib API was discovered
+
+Delegation produces shorter, more maintainable code than any amount of polishing.
+
 ## Common Patterns
 
 ### Replacing a tactic chain with `grind`
@@ -86,6 +96,81 @@ Try:
 ```lean
   grind [dvd_of_eq, dvd_trans]
 ```
+
+### Replacing `mul_le_mul` boilerplate with `gcongr`
+
+Before (from Lemma 1.4 polish, PR #117):
+```lean
+  apply mul_le_mul
+  · exact pow_le_pow_left₀ (f.nonneg _) (le_max_left _ _) _
+  · exact pow_le_pow_left₀ (f.nonneg _) (le_max_right _ _) _
+  · exact pow_nonneg (f.nonneg _) _
+  · exact pow_nonneg (le_max_of_le_left (f.nonneg _)) _
+```
+After:
+```lean
+  gcongr
+  · exact le_max_left _ _
+  · exact le_max_right _ _
+```
+`gcongr` automates monotonicity side conditions (nonneg, etc.) and focuses on the comparison subgoals.
+
+### Inlining single-use hypotheses
+
+Before (from Theorem 1.9 polish, PR #117):
+```lean
+  have hprod_ne : q.num.natAbs * q.den ≠ 0 :=
+    mul_ne_zero (Int.natAbs_ne_zero.mpr (Rat.num_ne_zero.mpr hq)) (Rat.den_pos q).ne'
+  have hndvd : ¬(p ∣ q.num.natAbs * q.den) := by
+    intro h; exact hp_ndvd (Nat.mem_primeFactors.mpr ⟨hp, h, hprod_ne⟩)
+```
+After:
+```lean
+  have hndvd : ¬(p ∣ q.num.natAbs * q.den) := by
+    intro h; exact hp_ndvd (Nat.mem_primeFactors.mpr ⟨hp, h,
+      mul_ne_zero (Int.natAbs_ne_zero.mpr (Rat.num_ne_zero.mpr hq)) (Rat.den_pos q).ne'⟩)
+```
+If a `have` is used exactly once, inline it to tighten the proof.
+
+### Collapsing linear auxiliary fact chains
+
+Before (from Example 1.29 polish, PR #119):
+```lean
+  have h7 : (0 : ℝ) ≤ 7 := by norm_num
+  have hsq : Real.sqrt 7 ^ 2 = 7 := Real.sq_sqrt h7
+  nlinarith [hsq]
+```
+After:
+```lean
+  nlinarith [Real.sq_sqrt (show (0 : ℝ) ≤ 7 by norm_num)]
+```
+When auxiliary facts form a linear chain (h1 → h2 → final tactic), collapse into a single expression.
+
+### Using `change` instead of `rw [show ... from rfl]`
+
+Before (from Theorem 1.9 polish, PR #117):
+```lean
+  rw [show f x ⊔ f y = max (f x) (f y) from rfl]
+```
+After:
+```lean
+  change f (x + y) ≤ max (f x) (f y)
+```
+For definitional unfoldings, `change` is clearer about intent.
+
+### Naming shadowed `this` bindings
+
+Before (from Example 1.29 polish, PR #119):
+```lean
+  have : (n : ℚ) = -3 / 2 := by simpa using hn
+  have : (2 : ℚ) * n = -3 := by linarith
+```
+After:
+```lean
+  have h_eq : (n : ℚ) = -3 / 2 := by simpa using hn
+  have h_two_n : (2 : ℚ) * n = -3 := by linarith
+```
+Shadowed `this` bindings are confusing even in local scope.
 
 ### Non-terminal `simp only` conversion
 
@@ -124,3 +209,29 @@ Try:
   rw [Nat.cast_mul]
 ```
 or just `norm_cast` if the whole goal is a coercion identity.
+
+## Polish Priority Order
+
+When polishing a proof, apply changes in this order (each step may eliminate the need for later ones):
+
+1. **Check for Mathlib delegation** — can the whole proof be replaced?
+2. **`gcongr` / `grind` pass** — can automation replace multi-line tactic chains?
+3. **Inline single-use `have`s** — tighten proof structure
+4. **Fix non-terminal `simp`** — replace with `simp only [...]`
+5. **`change` over `rw [show ... from rfl]`** — clearer intent
+6. **Name shadowed bindings** — readability
+7. **Collapse linear chains** — compress sequential auxiliary facts
+
+## Lint Audit Checklist
+
+After individual polishing, run a full lint audit across all files (from PR #126):
+
+1. Run `lake build 2>&1 | tee /tmp/lint-audit.log` and check for warnings
+2. Audit each file for non-terminal `simp` (the most common issue)
+3. For non-terminal `simp`, either:
+   - Replace with `simp only [specific_lemmas]` (use `simp?` output)
+   - Restructure to make it terminal (move it to be the last tactic in a branch)
+   - Replace with `change` if the simp is just unfolding a definition
+4. Remove unused imports discovered during audit
+5. Verify full `lake build` passes with zero warnings after all fixes
+6. Commit lint fixes separately from proof restructuring
