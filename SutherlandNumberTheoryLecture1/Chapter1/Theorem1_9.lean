@@ -21,10 +21,9 @@ theorem padicNorm_eq_one_of_not_dvd (q : ℚ) (hq : q ≠ 0) (p : ℕ)
     (hp : Nat.Prime p) (hp_ndvd : p ∉ (q.num.natAbs * q.den).primeFactors) :
     padicNorm p q = 1 := by
   haveI : Fact (Nat.Prime p) := ⟨hp⟩
-  have hprod_ne : q.num.natAbs * q.den ≠ 0 :=
-    mul_ne_zero (Int.natAbs_ne_zero.mpr (Rat.num_ne_zero.mpr hq)) (Rat.den_pos q).ne'
   have hndvd : ¬(p ∣ q.num.natAbs * q.den) := by
-    intro h; exact hp_ndvd (Nat.mem_primeFactors.mpr ⟨hp, h, hprod_ne⟩)
+    intro h; exact hp_ndvd (Nat.mem_primeFactors.mpr ⟨hp, h,
+      mul_ne_zero (Int.natAbs_ne_zero.mpr (Rat.num_ne_zero.mpr hq)) (Rat.den_pos q).ne'⟩)
   have hndvd_num : ¬(p ∣ q.num.natAbs) := fun h => hndvd (dvd_mul_of_dvd_left h _)
   have hndvd_den : ¬(p ∣ q.den) := fun h => hndvd (dvd_mul_of_dvd_right h _)
   rw [padicNorm.eq_zpow_of_nonzero hq]
@@ -100,8 +99,7 @@ theorem product_formula (q : ℚ) (hq : q ≠ 0) :
       congr 1
       change -((padicValInt p q.num : ℤ) - (padicValNat p b : ℤ)) = (padicValNat p b : ℤ)
       have h0 : (padicValInt p q.num : ℤ) = 0 := by
-        simp only [padicValInt]
-        exact_mod_cast padicValNat.eq_zero_of_not_dvd hp_ndvd_a
+        simp only [padicValInt]; exact_mod_cast padicValNat.eq_zero_of_not_dvd hp_ndvd_a
       omega
     rw [Finset.prod_congr rfl h_val]
     simp_rw [zpow_natCast]
