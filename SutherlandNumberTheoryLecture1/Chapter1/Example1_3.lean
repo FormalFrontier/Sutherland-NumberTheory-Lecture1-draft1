@@ -26,9 +26,11 @@ theorem trivialAbsoluteValue_apply_ne_zero (k : Type*) [DecidableEq k] [Field k]
 theorem trivialAbsoluteValue_isNonarchimedean (k : Type*) [DecidableEq k] [Field k] :
     IsNonarchimedean (trivialAbsoluteValue k) := by
   intro x y
-  simp only [trivialAbsoluteValue]
-  by_cases hx : x = 0 <;> by_cases hy : y = 0 <;>
-    simp [AbsoluteValue.trivial, hx, hy]
-  by_cases hxy : x + y = 0 <;> simp [hxy]
+  change AbsoluteValue.trivial (x + y) ≤ max (AbsoluteValue.trivial x) (AbsoluteValue.trivial y)
+  by_cases hx : x = 0
+  · simp [AbsoluteValue.trivial, hx]
+  · by_cases hy : y = 0
+    · simp [AbsoluteValue.trivial, hy]
+    · by_cases hxy : x + y = 0 <;> simp [AbsoluteValue.trivial, hx, hy, hxy]
 
 end SutherlandNumberTheoryLecture1.Chapter1
