@@ -329,7 +329,7 @@ Once scaffolding is complete, run `extract_blueprint single --all --json` agains
 
 ### Stage 3.2: Formalization Work Loop
 
-Orchestrate agents to formalize items, respecting the dependency DAG from the blueprint. Uses a tiered strategy: Claude agents first, with escalation to Aristotle (an automated theorem prover) for difficult proofs.
+Orchestrate agents to formalize items, respecting the dependency DAG from the blueprint.
 
 #### PR lifecycle
 
@@ -368,69 +368,6 @@ Agents query the blueprint to find ready work:
 
 Status updates are automatic: when an agent removes a `sorry`, the next extraction reflects the new status. No annotations needed in the Lean source. Non-formal nodes (discussion, external dependencies) are tracked via leanblueprint's LaTeX macros and `progress/items.json`.
 
-#### Tiered proving strategy
-
-Use a tiered approach to maximize throughput:
-
-1. **Claude first** — Claude agents attempt initial formalization: statement formalization, straightforward proofs, and definition translation. Most textbook items should be attempted by Claude first.
-
-2. **Escalate to Aristotle** — When a Claude agent fails to prove a theorem after 2-3 serious attempts, escalate to Aristotle. Record the escalation in `progress/items.json` by setting `"escalated_to_aristotle": true`.
-
-3. **Aristotle batch pass** — After Stage 3.1 scaffolding is complete, submit all sorry'd theorems to Aristotle as a batch. This runs concurrently with Claude agents working on other items. Any theorems Aristotle solves reduce the workload for Claude.
-
-#### Aristotle integration
-
-Aristotle is an automated theorem proving service that can fill `sorry` placeholders in Lean files. It is especially effective for standard mathematical proofs that follow well-known patterns.
-
-##### Submitting to Aristotle
-
-For each item to submit:
-
-1. **Prepare the file.** Create a temporary copy of the item's Lean file. The file must contain exactly one `sorry` (the target theorem). Change all other `sorry` occurrences to `admit`.
-
-2. **Gather context.** Collect sorry-free local Lean files that this item depends on (from the import chain). Skip Mathlib imports — Aristotle has Mathlib built in. If no local files are sorry-free yet (e.g., during the initial batch pass after Stage 3.1), submit with no context files. Pass context via `--context-files`.
-
-3. **Submit.**
-   ```bash
-   aristotle prove-from-file item_pending.lean --no-wait \
-     --no-auto-add-imports --context-files dep1.lean dep2.lean
-   ```
-
-4. **Record the project ID.** Aristotle returns a UUID. Store it in `progress/items.json`:
-   ```json
-   {
-     "Chapter1/Theorem1.1": {
-       "status": "sent_to_aristotle",
-       "aristotle_id": "uuid-here",
-       "last_updated": "2026-03-20"
-     }
-   }
-   ```
-
-5. **Clean up.** Delete the temporary file. Never commit files with `admit`.
-
-##### Monitoring and retrieval
-
-- **Poll every 5 minutes** for completion using the `aristotlelib` Python API.
-- **Respect the concurrency limit:** Aristotle allows at most 5 concurrent projects. Queue excess items and submit as slots free up.
-- **Deduplication:** Before submitting, check that the item is not already in `sent_to_aristotle` status. Only one submission per item at a time.
-- When a project completes, download the result to a temporary file for verification.
-
-##### Incorporating results
-
-When Aristotle returns a result:
-
-1. **Verify it compiles** against the local toolchain: copy the proof into the item's Lean file (under `lean/{Title}/...`) and run `lake build` for that module.
-2. **If it compiles clean:** Update status to `sorry_free` (if the item has no remaining sorries) or `proof_formalized`. Submit a PR.
-3. **If Aristotle reports the theorem is false:** Mark the item as `attention_needed`. Post a GitHub issue describing the counterexample Aristotle found. The formalized statement (from Stage 3.1) needs revision.
-4. **If it fails to compile** (toolchain version mismatch): Mark the item as `attention_needed` for manual review.
-
-##### Aristotle item statuses
-
-Items going through Aristotle use these statuses in `progress/items.json`:
-
-`statement_formalized` → `sent_to_aristotle` → `sorry_free` (success) or `attention_needed` (failure)
-
 #### Dependency tracking
 
 - Use `- [ ] depends on #X` comments in issues
@@ -444,7 +381,6 @@ Specialized triage agents should periodically review open issues for:
 - Missing low-level API lemmas needed across multiple items
 - Dependency ordering mistakes
 - Opportunities for useful tactics or metaprograms
-- Aristotle results that need attention (false statements, version mismatches)
 
 #### Formalization guidance
 
@@ -618,8 +554,6 @@ Commits made during a turn should mention the corresponding progress file in the
 Item statuses flow through:
 `identified` → `extracted` → `statement_formalized` → `proof_formalized` → `sorry_free` → `dependency_trimmed` → `proof_polished`
 
-Items escalated to Aristotle use: `statement_formalized` → `sent_to_aristotle` → `sorry_free` (success) or `attention_needed` (failure)
-
 ```json
 {
   "Chapter1/Theorem1.1": {
@@ -627,13 +561,6 @@ Items escalated to Aristotle use: `statement_formalized` → `sent_to_aristotle`
     "last_updated": "2026-03-20",
     "pr": "#42",
     "notes": ""
-  },
-  "Chapter2/Theorem2.3": {
-    "status": "sent_to_aristotle",
-    "last_updated": "2026-03-21",
-    "aristotle_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
-    "escalated_to_aristotle": true,
-    "notes": "Claude failed after 3 attempts, escalated"
   }
 }
 ```
