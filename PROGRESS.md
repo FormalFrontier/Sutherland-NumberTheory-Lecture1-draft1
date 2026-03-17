@@ -132,7 +132,7 @@ All Phase 2 stages completed on 2026-03-16. This phase produced the dependency g
 
 ## Phase 3: Formalization — Complete
 
-All Phase 3 stages completed on 2026-03-17. All 27 formalizable items are sorry-free. Dependencies trimmed to actual Lean imports.
+All Phase 3 stages completed on 2026-03-17. All 27 formalizable items are proof-polished (sorry-free, lint-clean, Mathlib-quality). Dependencies trimmed to actual Lean imports. Upstreaming analysis completed with 5 candidates identified.
 
 ### Stage 3.1: Lean Scaffolding
 **Status:** Complete
@@ -169,18 +169,41 @@ All Phase 3 stages completed on 2026-03-17. All 27 formalizable items are sorry-
 
 | Status | Count |
 |--------|-------|
-| `sorry_free` | 27 |
+| `proof_polished` | 27 |
 | `not_applicable` | 11 |
 | **Total** | **38** |
 
-All 27 formalizable items are sorry-free.
+All 27 formalizable items are proof-polished (sorry-free, lint-clean, Mathlib-quality).
 
 ### Stage 3.3: Dependency Trimming
 **Status:** Complete
 **Date:** 2026-03-17
 **Notes:** Conservative linear chain in `dependencies/internal.json` replaced with actual Lean import-derived dependencies (PR #107). Result: most Lean files are standalone (no internal imports from other formalized items). Only Corollary 1.5 depends on Lemma 1.4. Discussion items retain dependencies on the formal items they discuss.
 
----
+### Stage 3.4: Proof Polishing
+**Status:** Complete
+**Date:** 2026-03-17
+**Notes:** All 27 formalizable items polished to Mathlib quality. Proofs simplified, redundant steps removed, linting issues fixed. Theorem 1.16 rewritten to match PDF's 7-item DVR characterization. Mathlib delegation refactors applied to Example 1.3, Example 1.14, and Proposition 1.28. Full project lint audit passed with zero warnings.
+
+| PR | Title | Scope |
+|----|-------|-------|
+| #117 | refactor: proof polish Theorem1_9 and Lemma1_4 | Proof simplification |
+| #119 | refactor: proof polish Example1_24 and Example1_29 | Proof simplification |
+| #125 | Refactor Example1_3 to use Mathlib's AbsoluteValue.trivial | Mathlib delegation |
+| #126 | fix: lint pass — Proposition1_28 and Example1_3 fixes + full audit | Lint cleanup |
+| #127 | refactor: clean up Example1_14 to document Mathlib delegation | Mathlib delegation |
+| #132 | feat: rewrite Theorem1_16 TFAE to match PDF's 7-item DVR characterization | Statement rewrite |
+| #133 | review: verify Proposition 1.28 Mathlib delegation refactor | Review |
+| #134 | review: verify Theorem 1.9 and 1.16 match PDF after #110 and #111 | Review |
+
+### Stage 3.5: Upstreaming Analysis
+**Status:** Complete
+**Date:** 2026-03-17
+**Notes:** Triage of all 27 items for Mathlib upstreaming potential. 5 candidates identified, 3 items marked as already covered by Mathlib. Analysis documented in `UPSTREAMING.md`.
+
+| PR | Title |
+|----|-------|
+| #124 | Stage 3.5: Upstreaming Analysis — triage, Mathlib research, and UPSTREAMING.md |
 
 ---
 
@@ -190,10 +213,10 @@ All 27 formalizable items are sorry-free.
 |--------|-------|
 | Total items in book | 38 |
 | Formalizable items | 27 |
-| Sorry-free proofs | 27/27 (100%) |
-| Merged PRs | 48 |
-| Issues created | 58 |
-| Issues closed | 57 |
+| Proof-polished proofs | 27/27 (100%) |
+| Merged PRs | 60 |
+| Issues created | 73 |
+| Issues closed | 70 |
 | Aristotle escalations | 0 |
 | Project duration | 2 days (2026-03-16 to 2026-03-17) |
 
@@ -283,6 +306,18 @@ All 27 formalizable items are sorry-free.
 | #106 | Review: Stage 3.2 completion gate | QA |
 | #107 | Stage 3.3: Dependency Trimming | 3.3 |
 | #108 | Meditate: Final project retrospective | Skills |
+| #109 | doc: Final project completion summary | Summary |
+| #113 | feat: product_formula_all_primes using finprod | 3.2 |
+| #117 | refactor: proof polish Theorem1_9 and Lemma1_4 | 3.4 |
+| #119 | refactor: proof polish Example1_24 and Example1_29 | 3.4 |
+| #124 | Stage 3.5: Upstreaming Analysis | 3.5 |
+| #125 | Refactor Example1_3 to use Mathlib's AbsoluteValue.trivial | 3.4 |
+| #126 | fix: lint pass — Proposition1_28 and Example1_3 fixes | 3.4 |
+| #127 | refactor: clean up Example1_14 Mathlib delegation | 3.4 |
+| #129 | Review: Verify Mathlib delegation refactors (Ex 1.3, Ex 1.14) | QA |
+| #132 | feat: rewrite Theorem1_16 TFAE to match PDF | 3.4 |
+| #133 | review: verify Proposition 1.28 Mathlib delegation refactor | QA |
+| #134 | review: verify Theorem 1.9 and 1.16 match PDF | QA |
 
 ## Infrastructure and Skills
 

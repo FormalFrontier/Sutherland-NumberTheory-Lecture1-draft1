@@ -23,7 +23,7 @@
   {
     "id": "Lecture1/Definition1.2",
     "type": "definition",
-    "status": "sorry_free",
+    "status": "proof_polished",
     "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Definition1_2.lean",
     "aristotle_project_id": "",
     "upstreaming_status": "rejected"
@@ -31,7 +31,7 @@
   {
     "id": "Lecture1/Example1.3",
     "type": "example",
-    "status": "sorry_free",
+    "status": "proof_polished",
     "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Example1_3.lean",
     "aristotle_project_id": "",
     "upstreaming_status": "mathlib_covered"
@@ -39,7 +39,7 @@
   {
     "id": "Lecture1/Lemma1.4",
     "type": "lemma",
-    "status": "sorry_free",
+    "status": "proof_polished",
     "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Lemma1_4.lean",
     "aristotle_project_id": "",
     "upstreaming_status": "candidate"
@@ -47,7 +47,7 @@
   {
     "id": "Lecture1/Corollary1.5",
     "type": "corollary",
-    "status": "sorry_free",
+    "status": "proof_polished",
     "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Corollary1_5.lean",
     "aristotle_project_id": "",
     "upstreaming_status": "candidate"
@@ -55,7 +55,7 @@
   {
     "id": "Lecture1/Definition1.6",
     "type": "definition",
-    "status": "sorry_free",
+    "status": "proof_polished",
     "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Definition1_6.lean",
     "aristotle_project_id": "",
     "upstreaming_status": "rejected"
@@ -70,7 +70,7 @@
   {
     "id": "Lecture1/Definition1.7",
     "type": "definition",
-    "status": "sorry_free",
+    "status": "proof_polished",
     "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Definition1_7.lean",
     "aristotle_project_id": "",
     "upstreaming_status": "rejected"
@@ -78,7 +78,7 @@
   {
     "id": "Lecture1/Theorem1.8",
     "type": "theorem",
-    "status": "sorry_free",
+    "status": "proof_polished",
     "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Theorem1_8.lean",
     "aristotle_project_id": "",
     "upstreaming_status": "rejected"
@@ -86,7 +86,7 @@
   {
     "id": "Lecture1/Theorem1.9",
     "type": "theorem",
-    "status": "sorry_free",
+    "status": "proof_polished",
     "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Theorem1_9.lean",
     "aristotle_project_id": "",
     "upstreaming_status": "candidate"
@@ -101,7 +101,7 @@
   {
     "id": "Lecture1/Definition1.10",
     "type": "definition",
-    "status": "sorry_free",
+    "status": "proof_polished",
     "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Definition1_10.lean",
     "aristotle_project_id": "",
     "upstreaming_status": "rejected"
@@ -109,7 +109,7 @@
   {
     "id": "Lecture1/Definition1.11",
     "type": "definition",
-    "status": "sorry_free",
+    "status": "proof_polished",
     "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Definition1_11.lean",
     "aristotle_project_id": "",
     "upstreaming_status": "rejected"
@@ -117,7 +117,7 @@
   {
     "id": "Lecture1/Definition1.12",
     "type": "definition",
-    "status": "sorry_free",
+    "status": "proof_polished",
     "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Definition1_12.lean",
     "aristotle_project_id": "",
     "upstreaming_status": "rejected"
@@ -125,7 +125,7 @@
   {
     "id": "Lecture1/Definition1.13",
     "type": "definition",
-    "status": "sorry_free",
+    "status": "proof_polished",
     "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Definition1_13.lean",
     "aristotle_project_id": "",
     "upstreaming_status": "rejected"
@@ -140,7 +140,7 @@
   {
     "id": "Lecture1/Example1.14",
     "type": "example",
-    "status": "sorry_free",
+    "status": "proof_polished",
     "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Example1_14.lean",
     "aristotle_project_id": "",
     "upstreaming_status": "mathlib_covered"
@@ -148,7 +148,7 @@
   {
     "id": "Lecture1/Example1.15",
     "type": "example",
-    "status": "sorry_free",
+    "status": "proof_polished",
     "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Example1_15.lean",
     "aristotle_project_id": "",
     "upstreaming_status": "rejected"
@@ -163,7 +163,7 @@
   {
     "id": "Lecture1/Theorem1.16",
     "type": "theorem",
-    "status": "sorry_free",
+    "status": "proof_polished",
     "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Theorem1_16.lean",
     "aristotle_project_id": "",
     "upstreaming_status": "rejected"
@@ -178,7 +178,7 @@
   {
     "id": "Lecture1/Definition1.17",
     "type": "definition",
-    "status": "sorry_free",
+    "status": "proof_polished",
     "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Definition1_17.lean",
     "aristotle_project_id": "",
     "upstreaming_status": "rejected"
@@ -186,7 +186,7 @@
   {
     "id": "Lecture1/Proposition1.18",
     "type": "proposition",
-    "status": "sorry_free",
+    "status": "proof_polished",
     "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Proposition1_18.lean",
     "aristotle_project_id": "",
     "upstreaming_status": "rejected"
@@ -194,7 +194,7 @@
   {
     "id": "Lecture1/Definition1.19",
     "type": "definition",
-    "status": "sorry_free",
+    "status": "proof_polished",
     "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Definition1_19.lean",
     "aristotle_project_id": "",
     "upstreaming_status": "rejected"
@@ -202,7 +202,7 @@
   {
     "id": "Lecture1/Proposition1.20",
     "type": "proposition",
-    "status": "sorry_free",
+    "status": "proof_polished",
     "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Proposition1_20.lean",
     "aristotle_project_id": "",
     "upstreaming_status": "rejected"
@@ -210,7 +210,7 @@
   {
     "id": "Lecture1/Corollary1.21",
     "type": "corollary",
-    "status": "sorry_free",
+    "status": "proof_polished",
     "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Corollary1_21.lean",
     "aristotle_project_id": "",
     "upstreaming_status": "rejected"
@@ -218,7 +218,7 @@
   {
     "id": "Lecture1/Proposition1.22",
     "type": "proposition",
-    "status": "sorry_free",
+    "status": "proof_polished",
     "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Proposition1_22.lean",
     "aristotle_project_id": "",
     "upstreaming_status": "rejected"
@@ -226,7 +226,7 @@
   {
     "id": "Lecture1/Corollary1.23",
     "type": "corollary",
-    "status": "sorry_free",
+    "status": "proof_polished",
     "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Corollary1_23.lean",
     "aristotle_project_id": "",
     "upstreaming_status": "rejected"
@@ -234,7 +234,7 @@
   {
     "id": "Lecture1/Example1.24",
     "type": "example",
-    "status": "sorry_free",
+    "status": "proof_polished",
     "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Example1_24.lean",
     "aristotle_project_id": "",
     "upstreaming_status": "candidate"
@@ -242,7 +242,7 @@
   {
     "id": "Lecture1/Proposition1.25",
     "type": "proposition",
-    "status": "sorry_free",
+    "status": "proof_polished",
     "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Proposition1_25.lean",
     "aristotle_project_id": "",
     "upstreaming_status": "rejected"
@@ -250,7 +250,7 @@
   {
     "id": "Lecture1/Definition1.26",
     "type": "definition",
-    "status": "sorry_free",
+    "status": "proof_polished",
     "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Definition1_26.lean",
     "aristotle_project_id": "",
     "upstreaming_status": "rejected"
@@ -265,7 +265,7 @@
   {
     "id": "Lecture1/Proposition1.28",
     "type": "proposition",
-    "status": "sorry_free",
+    "status": "proof_polished",
     "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Proposition1_28.lean",
     "aristotle_project_id": "",
     "upstreaming_status": "mathlib_covered"
@@ -273,7 +273,7 @@
   {
     "id": "Lecture1/Example1.29",
     "type": "example",
-    "status": "sorry_free",
+    "status": "proof_polished",
     "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Example1_29.lean",
     "aristotle_project_id": "",
     "upstreaming_status": "candidate"
