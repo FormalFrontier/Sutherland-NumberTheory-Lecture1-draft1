@@ -34,7 +34,7 @@ theorem integral_iff_minpoly_over_base
     rw [show minpoly K α = (minpoly A α).map (algebraMap A K) from
       minpoly.isIntegrallyClosed_eq_field_fractions' (R := A) (S := L) (K := K) hAα]
     intro i
-    simp [Polynomial.coeff_map]
+    simp only [Polynomial.coeff_map, RingHom.mem_range, exists_apply_eq_apply]
   · intro hcoeff
     have hlifts : minpoly K α ∈ Polynomial.lifts (algebraMap A K) := by
       rw [Polynomial.lifts_iff_coeff_lifts]
