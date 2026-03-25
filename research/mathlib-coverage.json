@@ -1,6 +1,6 @@
 [
   {
-    "item_id": "Lecture1/Remark1.1",
+    "item_id": "Lecture1/01.01.Remark",
     "mathlib_matches": [
       {
         "name": "CommRing",
@@ -11,7 +11,7 @@
     "coverage": "fully_covered"
   },
   {
-    "item_id": "Lecture1/Definition1.2",
+    "item_id": "Lecture1/01.02.Definition",
     "mathlib_matches": [
       {
         "name": "AbsoluteValue",
@@ -21,13 +21,13 @@
       {
         "name": "IsNonarchimedean",
         "type": "exact_match",
-        "notes": "Defined in Mathlib.Algebra.Order.Ring.Basic as f(a+b) <= f(a) ⊔ f(b); used throughout Mathlib for the ultrametric property"
+        "notes": "Defined in Mathlib.Algebra.Order.Ring.Basic as f(a+b) <= f(a) \u2294 f(b); used throughout Mathlib for the ultrametric property"
       }
     ],
     "coverage": "fully_covered"
   },
   {
-    "item_id": "Lecture1/Example1.3",
+    "item_id": "Lecture1/01.03.Example",
     "mathlib_matches": [
       {
         "name": "AbsoluteValue.trivial",
@@ -38,7 +38,7 @@
     "coverage": "fully_covered"
   },
   {
-    "item_id": "Lecture1/Lemma1.4",
+    "item_id": "Lecture1/01.04.Lemma",
     "mathlib_matches": [
       {
         "name": "IsNonarchimedean.natCast_le_one",
@@ -54,7 +54,7 @@
     "coverage": "partially_covered"
   },
   {
-    "item_id": "Lecture1/Corollary1.5",
+    "item_id": "Lecture1/01.05.Corollary",
     "mathlib_matches": [
       {
         "name": "IsNonarchimedean.natCast_le_one",
@@ -65,7 +65,7 @@
     "coverage": "partially_covered"
   },
   {
-    "item_id": "Lecture1/Definition1.6",
+    "item_id": "Lecture1/01.06.Definition",
     "mathlib_matches": [
       {
         "name": "AbsoluteValue.IsEquiv",
@@ -76,7 +76,7 @@
     "coverage": "fully_covered"
   },
   {
-    "item_id": "Lecture1/Definition1.7",
+    "item_id": "Lecture1/01.07.Definition",
     "mathlib_matches": [
       {
         "name": "padicValNat",
@@ -102,7 +102,7 @@
     "coverage": "fully_covered"
   },
   {
-    "item_id": "Lecture1/Theorem1.8",
+    "item_id": "Lecture1/01.08.Theorem",
     "mathlib_matches": [
       {
         "name": "Rat.AbsoluteValue.equiv_real_or_padic",
@@ -113,12 +113,12 @@
     "coverage": "fully_covered"
   },
   {
-    "item_id": "Lecture1/Theorem1.9",
+    "item_id": "Lecture1/01.09.Theorem",
     "mathlib_matches": [],
     "coverage": "not_covered"
   },
   {
-    "item_id": "Lecture1/Definition1.10",
+    "item_id": "Lecture1/01.10.Definition",
     "mathlib_matches": [
       {
         "name": "Valuation",
@@ -144,7 +144,7 @@
     "coverage": "partially_covered"
   },
   {
-    "item_id": "Lecture1/Definition1.11",
+    "item_id": "Lecture1/01.11.Definition",
     "mathlib_matches": [
       {
         "name": "ValuationRing",
@@ -155,7 +155,7 @@
     "coverage": "fully_covered"
   },
   {
-    "item_id": "Lecture1/Definition1.12",
+    "item_id": "Lecture1/01.12.Definition",
     "mathlib_matches": [
       {
         "name": "IsLocalRing",
@@ -166,7 +166,7 @@
     "coverage": "fully_covered"
   },
   {
-    "item_id": "Lecture1/Definition1.13",
+    "item_id": "Lecture1/01.13.Definition",
     "mathlib_matches": [
       {
         "name": "IsLocalRing.ResidueField",
@@ -177,7 +177,7 @@
     "coverage": "fully_covered"
   },
   {
-    "item_id": "Lecture1/Example1.14",
+    "item_id": "Lecture1/01.14.Example",
     "mathlib_matches": [
       {
         "name": "Localization.AtPrime",
@@ -193,7 +193,7 @@
     "coverage": "partially_covered"
   },
   {
-    "item_id": "Lecture1/Example1.15",
+    "item_id": "Lecture1/01.15.Example",
     "mathlib_matches": [
       {
         "name": "PowerSeries",
@@ -214,12 +214,12 @@
     "coverage": "partially_covered"
   },
   {
-    "item_id": "Lecture1/Theorem1.16",
+    "item_id": "Lecture1/01.16.Theorem",
     "mathlib_matches": [
       {
         "name": "IsDiscreteValuationRing.TFAE",
         "type": "exact_match",
-        "notes": "In Mathlib.RingTheory.DiscreteValuationRing.TFAE; proves equivalence of: DVR, valuation ring, Dedekind domain, integrally closed with unique prime, principal maximal ideal, dim_k m/m^2 = 1, every nonzero ideal is a power of m — for Noetherian local domains that are not fields"
+        "notes": "In Mathlib.RingTheory.DiscreteValuationRing.TFAE; proves equivalence of: DVR, valuation ring, Dedekind domain, integrally closed with unique prime, principal maximal ideal, dim_k m/m^2 = 1, every nonzero ideal is a power of m \u2014 for Noetherian local domains that are not fields"
       },
       {
         "name": "tfae_of_isNoetherianRing_of_isLocalRing_of_isDomain",
@@ -230,7 +230,7 @@
     "coverage": "fully_covered"
   },
   {
-    "item_id": "Lecture1/Definition1.17",
+    "item_id": "Lecture1/01.17.Definition",
     "mathlib_matches": [
       {
         "name": "IsIntegral",
@@ -246,7 +246,7 @@
     "coverage": "fully_covered"
   },
   {
-    "item_id": "Lecture1/Proposition1.18",
+    "item_id": "Lecture1/01.18.Proposition",
     "mathlib_matches": [
       {
         "name": "IsIntegral.add",
@@ -262,7 +262,7 @@
     "coverage": "fully_covered"
   },
   {
-    "item_id": "Lecture1/Definition1.19",
+    "item_id": "Lecture1/01.19.Definition",
     "mathlib_matches": [
       {
         "name": "integralClosure",
@@ -283,7 +283,7 @@
     "coverage": "fully_covered"
   },
   {
-    "item_id": "Lecture1/Proposition1.20",
+    "item_id": "Lecture1/01.20.Proposition",
     "mathlib_matches": [
       {
         "name": "Algebra.IsIntegral.trans",
@@ -299,7 +299,7 @@
     "coverage": "fully_covered"
   },
   {
-    "item_id": "Lecture1/Corollary1.21",
+    "item_id": "Lecture1/01.21.Corollary",
     "mathlib_matches": [
       {
         "name": "integralClosure.isIntegrallyClosedIn",
@@ -310,7 +310,7 @@
     "coverage": "fully_covered"
   },
   {
-    "item_id": "Lecture1/Proposition1.22",
+    "item_id": "Lecture1/01.22.Proposition",
     "mathlib_matches": [
       {
         "name": "UniqueFactorizationMonoid.instIsIntegrallyClosed",
@@ -326,7 +326,7 @@
     "coverage": "fully_covered"
   },
   {
-    "item_id": "Lecture1/Corollary1.23",
+    "item_id": "Lecture1/01.23.Corollary",
     "mathlib_matches": [
       {
         "name": "UniqueFactorizationMonoid.instIsIntegrallyClosed",
@@ -337,12 +337,12 @@
     "coverage": "fully_covered"
   },
   {
-    "item_id": "Lecture1/Example1.24",
+    "item_id": "Lecture1/01.24.Example",
     "mathlib_matches": [],
     "coverage": "not_covered"
   },
   {
-    "item_id": "Lecture1/Proposition1.25",
+    "item_id": "Lecture1/01.25.Proposition",
     "mathlib_matches": [
       {
         "name": "Valuation.Integers.isIntegrallyClosed",
@@ -353,7 +353,7 @@
     "coverage": "fully_covered"
   },
   {
-    "item_id": "Lecture1/Definition1.26",
+    "item_id": "Lecture1/01.26.Definition",
     "mathlib_matches": [
       {
         "name": "NumberField",
@@ -363,24 +363,24 @@
       {
         "name": "NumberField.RingOfIntegers",
         "type": "exact_match",
-        "notes": "Notation 𝓞 K; the integral closure of Z in K"
+        "notes": "Notation \ud835\udcde K; the integral closure of Z in K"
       }
     ],
     "coverage": "fully_covered"
   },
   {
-    "item_id": "Lecture1/Remark1.27",
+    "item_id": "Lecture1/01.27.Remark",
     "mathlib_matches": [
       {
         "name": "NumberField.RingOfIntegers",
         "type": "related",
-        "notes": "Mathlib uses 𝓞 K notation. The remark about orders and Z-lattices is not directly formalized as a single statement but the components exist (FreeModule, Z-lattice theory)"
+        "notes": "Mathlib uses \ud835\udcde K notation. The remark about orders and Z-lattices is not directly formalized as a single statement but the components exist (FreeModule, Z-lattice theory)"
       }
     ],
     "coverage": "partially_covered"
   },
   {
-    "item_id": "Lecture1/Proposition1.28",
+    "item_id": "Lecture1/01.28.Proposition",
     "mathlib_matches": [
       {
         "name": "minpoly.isIntegrallyClosed_eq_field_fractions",
@@ -396,7 +396,7 @@
     "coverage": "fully_covered"
   },
   {
-    "item_id": "Lecture1/Example1.29",
+    "item_id": "Lecture1/01.29.Example",
     "mathlib_matches": [],
     "coverage": "not_covered"
   }

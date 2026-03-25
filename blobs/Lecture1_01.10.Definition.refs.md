@@ -1,4 +1,4 @@
-# References for Lecture1/Definition1.10
+# References for Lecture1/01.10.Definition
 
 ## Mathlib Coverage
 

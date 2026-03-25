@@ -1,4 +1,4 @@
-# References for Lecture1/Lemma1.4
+# References for Lecture1/01.04.Lemma
 
 ## Mathlib Coverage
 

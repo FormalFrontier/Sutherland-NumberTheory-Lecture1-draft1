@@ -1,4 +1,4 @@
-# References for Lecture1/Example1.3
+# References for Lecture1/01.03.Example
 
 ## Mathlib Coverage
 

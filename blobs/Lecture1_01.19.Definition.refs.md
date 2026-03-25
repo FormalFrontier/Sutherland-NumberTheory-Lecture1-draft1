@@ -1,18 +1,23 @@
-# References for Lecture1/Definition1.17
+# References for Lecture1/01.19.Definition
 
 ## Mathlib Coverage
 
 **Status:** fully_covered
 
-### `IsIntegral`
+### `integralClosure`
 
 - **Match type:** exact_match
-- **Notes:** Defined in Mathlib.RingTheory.IntegralClosure; an element b is integral over A if it is a root of a monic polynomial in A[x]
+- **Notes:** Defined in Mathlib.RingTheory.IntegralClosure.Algebra.Basic; the subalgebra of B consisting of elements integral over R
 
-### `Algebra.IsIntegral`
+### `IsIntegrallyClosed`
 
 - **Match type:** exact_match
-- **Notes:** Class in Mathlib.RingTheory.IntegralClosure.Algebra.Defs; B is integral over A if every element is integral
+- **Notes:** In Mathlib.RingTheory.IntegralClosure.IntegrallyClosed; R is integrally closed if it contains all integral elements of Frac(R)
+
+### `IsIntegrallyClosedIn`
+
+- **Match type:** exact_match
+- **Notes:** More general version: R is integrally closed in A
 
 ## External Dependencies
 
@@ -29,3 +34,10 @@
 - **Category:** undergraduate_prerequisite
 - **Mathlib coverage:** fully_covered
   - `Polynomial` (exact_match): Mathlib.Algebra.Polynomial; polynomial rings, monic polynomials (Polynomial.Monic), irreducible polynomials, minimal polynomials (minpoly) all fully covered
+
+### `ext/fraction-field`
+
+- **Description:** Fraction field (field of fractions) of an integral domain
+- **Category:** undergraduate_prerequisite
+- **Mathlib coverage:** fully_covered
+  - `FractionRing` (exact_match): Mathlib.RingTheory.Localization.FractionRing; fraction field of an integral domain with IsFractionRing typeclass

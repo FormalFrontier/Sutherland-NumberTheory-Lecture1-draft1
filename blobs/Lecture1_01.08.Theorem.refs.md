@@ -1,4 +1,4 @@
-# References for Lecture1/Theorem1.8
+# References for Lecture1/01.08.Theorem
 
 ## Mathlib Coverage
 

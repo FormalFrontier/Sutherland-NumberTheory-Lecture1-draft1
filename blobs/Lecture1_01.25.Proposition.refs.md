@@ -1,4 +1,4 @@
-# References for Lecture1/Proposition1.25
+# References for Lecture1/01.25.Proposition
 
 ## Mathlib Coverage
 

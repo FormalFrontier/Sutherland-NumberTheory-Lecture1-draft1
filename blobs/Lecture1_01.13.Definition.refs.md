@@ -1,22 +1,15 @@
-# References for Lecture1/Definition1.12
+# References for Lecture1/01.13.Definition
 
 ## Mathlib Coverage
 
 **Status:** fully_covered
 
-### `IsLocalRing`
+### `IsLocalRing.ResidueField`
 
 - **Match type:** exact_match
-- **Notes:** Class in Mathlib.RingTheory.LocalRing.Defs; commutative ring with a unique maximal ideal
+- **Notes:** Defined in Mathlib.RingTheory.LocalRing.ResidueField; the quotient A/m for a local ring A with maximal ideal m
 
 ## External Dependencies
-
-### `ext/ring`
-
-- **Description:** Definition of a commutative ring with identity, ring homomorphisms, ring extensions
-- **Category:** undergraduate_prerequisite
-- **Mathlib coverage:** fully_covered
-  - `CommRing` (exact_match): Class in Mathlib; commutative rings with identity, ring homomorphisms fully covered
 
 ### `ext/ideal-theory`
 

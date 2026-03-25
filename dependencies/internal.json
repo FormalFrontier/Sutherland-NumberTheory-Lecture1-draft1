@@ -1,60 +1,60 @@
 {
-  "Lecture1/Introduction": [],
-  "Lecture1/Remark1.1": [
-    "Lecture1/Introduction"
+  "Lecture1/01.00.Introduction": [],
+  "Lecture1/01.01.Remark": [
+    "Lecture1/01.00.Introduction"
   ],
-  "Lecture1/Discussion_after_1.1": [
-    "Lecture1/Remark1.1"
+  "Lecture1/01.01a.Discussion": [
+    "Lecture1/01.01.Remark"
   ],
-  "Lecture1/Definition1.2": [],
-  "Lecture1/Example1.3": [],
-  "Lecture1/Lemma1.4": [],
-  "Lecture1/Corollary1.5": [
-    "Lecture1/Lemma1.4"
+  "Lecture1/01.02.Definition": [],
+  "Lecture1/01.03.Example": [],
+  "Lecture1/01.04.Lemma": [],
+  "Lecture1/01.05.Corollary": [
+    "Lecture1/01.04.Lemma"
   ],
-  "Lecture1/Definition1.6": [],
-  "Lecture1/Discussion_after_1.6": [
-    "Lecture1/Definition1.6"
+  "Lecture1/01.06.Definition": [],
+  "Lecture1/01.06a.Discussion": [
+    "Lecture1/01.06.Definition"
   ],
-  "Lecture1/Definition1.7": [],
-  "Lecture1/Theorem1.8": [],
-  "Lecture1/Theorem1.9": [],
-  "Lecture1/Discussion_after_1.9": [
-    "Lecture1/Theorem1.9"
+  "Lecture1/01.07.Definition": [],
+  "Lecture1/01.08.Theorem": [],
+  "Lecture1/01.09.Theorem": [],
+  "Lecture1/01.09a.Discussion": [
+    "Lecture1/01.09.Theorem"
   ],
-  "Lecture1/Definition1.10": [],
-  "Lecture1/Definition1.11": [],
-  "Lecture1/Definition1.12": [],
-  "Lecture1/Definition1.13": [],
-  "Lecture1/Discussion_after_1.13": [
-    "Lecture1/Definition1.10",
-    "Lecture1/Definition1.11"
+  "Lecture1/01.10.Definition": [],
+  "Lecture1/01.11.Definition": [],
+  "Lecture1/01.12.Definition": [],
+  "Lecture1/01.13.Definition": [],
+  "Lecture1/01.13a.Discussion": [
+    "Lecture1/01.10.Definition",
+    "Lecture1/01.11.Definition"
   ],
-  "Lecture1/Example1.14": [],
-  "Lecture1/Example1.15": [],
-  "Lecture1/Discussion_after_1.15": [
-    "Lecture1/Definition1.11",
-    "Lecture1/Definition1.12"
+  "Lecture1/01.14.Example": [],
+  "Lecture1/01.15.Example": [],
+  "Lecture1/01.15a.Discussion": [
+    "Lecture1/01.11.Definition",
+    "Lecture1/01.12.Definition"
   ],
-  "Lecture1/Theorem1.16": [],
-  "Lecture1/Discussion_after_1.16": [
-    "Lecture1/Theorem1.16"
+  "Lecture1/01.16.Theorem": [],
+  "Lecture1/01.16a.Discussion": [
+    "Lecture1/01.16.Theorem"
   ],
-  "Lecture1/Definition1.17": [],
-  "Lecture1/Proposition1.18": [],
-  "Lecture1/Definition1.19": [],
-  "Lecture1/Proposition1.20": [],
-  "Lecture1/Corollary1.21": [],
-  "Lecture1/Proposition1.22": [],
-  "Lecture1/Corollary1.23": [],
-  "Lecture1/Example1.24": [],
-  "Lecture1/Proposition1.25": [],
-  "Lecture1/Definition1.26": [],
-  "Lecture1/Remark1.27": [
-    "Lecture1/Definition1.26"
+  "Lecture1/01.17.Definition": [],
+  "Lecture1/01.18.Proposition": [],
+  "Lecture1/01.19.Definition": [],
+  "Lecture1/01.20.Proposition": [],
+  "Lecture1/01.21.Corollary": [],
+  "Lecture1/01.22.Proposition": [],
+  "Lecture1/01.23.Corollary": [],
+  "Lecture1/01.24.Example": [],
+  "Lecture1/01.25.Proposition": [],
+  "Lecture1/01.26.Definition": [],
+  "Lecture1/01.27.Remark": [
+    "Lecture1/01.26.Definition"
   ],
-  "Lecture1/Proposition1.28": [],
-  "Lecture1/Example1.29": [],
-  "Lecture1/References": [],
-  "Lecture1/Backmatter": []
+  "Lecture1/01.28.Proposition": [],
+  "Lecture1/01.29.Example": [],
+  "Lecture1/01.99.References": [],
+  "Lecture1/01.99a.Discussion": []
 }

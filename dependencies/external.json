@@ -4,17 +4,17 @@
     "description": "Definition of a field and basic field theory (characteristic, prime fields, field extensions)",
     "category": "undergraduate_prerequisite",
     "used_by": [
-      "Lecture1/Introduction",
-      "Lecture1/Discussion_after_1.1",
-      "Lecture1/Definition1.2",
-      "Lecture1/Example1.3",
-      "Lecture1/Lemma1.4",
-      "Lecture1/Corollary1.5",
-      "Lecture1/Definition1.6",
-      "Lecture1/Discussion_after_1.6",
-      "Lecture1/Definition1.10",
-      "Lecture1/Example1.15",
-      "Lecture1/Definition1.26"
+      "Lecture1/01.00.Introduction",
+      "Lecture1/01.01a.Discussion",
+      "Lecture1/01.02.Definition",
+      "Lecture1/01.03.Example",
+      "Lecture1/01.04.Lemma",
+      "Lecture1/01.05.Corollary",
+      "Lecture1/01.06.Definition",
+      "Lecture1/01.06a.Discussion",
+      "Lecture1/01.10.Definition",
+      "Lecture1/01.15.Example",
+      "Lecture1/01.26.Definition"
     ]
   },
   {
@@ -22,16 +22,16 @@
     "description": "Definition of a commutative ring with identity, ring homomorphisms, ring extensions",
     "category": "undergraduate_prerequisite",
     "used_by": [
-      "Lecture1/Introduction",
-      "Lecture1/Remark1.1",
-      "Lecture1/Definition1.10",
-      "Lecture1/Definition1.11",
-      "Lecture1/Definition1.12",
-      "Lecture1/Definition1.17",
-      "Lecture1/Proposition1.18",
-      "Lecture1/Definition1.19",
-      "Lecture1/Proposition1.20",
-      "Lecture1/Corollary1.21"
+      "Lecture1/01.00.Introduction",
+      "Lecture1/01.01.Remark",
+      "Lecture1/01.10.Definition",
+      "Lecture1/01.11.Definition",
+      "Lecture1/01.12.Definition",
+      "Lecture1/01.17.Definition",
+      "Lecture1/01.18.Proposition",
+      "Lecture1/01.19.Definition",
+      "Lecture1/01.20.Proposition",
+      "Lecture1/01.21.Corollary"
     ]
   },
   {
@@ -39,10 +39,10 @@
     "description": "Definition of an integral domain",
     "category": "undergraduate_prerequisite",
     "used_by": [
-      "Lecture1/Definition1.10",
-      "Lecture1/Definition1.11",
-      "Lecture1/Theorem1.16",
-      "Lecture1/Proposition1.28"
+      "Lecture1/01.10.Definition",
+      "Lecture1/01.11.Definition",
+      "Lecture1/01.16.Theorem",
+      "Lecture1/01.28.Proposition"
     ]
   },
   {
@@ -50,15 +50,15 @@
     "description": "Ideals (prime, maximal, principal), quotient rings, ideal generation",
     "category": "undergraduate_prerequisite",
     "used_by": [
-      "Lecture1/Introduction",
-      "Lecture1/Definition1.10",
-      "Lecture1/Definition1.11",
-      "Lecture1/Definition1.12",
-      "Lecture1/Definition1.13",
-      "Lecture1/Example1.14",
-      "Lecture1/Discussion_after_1.13",
-      "Lecture1/Discussion_after_1.15",
-      "Lecture1/Theorem1.16"
+      "Lecture1/01.00.Introduction",
+      "Lecture1/01.10.Definition",
+      "Lecture1/01.11.Definition",
+      "Lecture1/01.12.Definition",
+      "Lecture1/01.13.Definition",
+      "Lecture1/01.14.Example",
+      "Lecture1/01.13a.Discussion",
+      "Lecture1/01.15a.Discussion",
+      "Lecture1/01.16.Theorem"
     ]
   },
   {
@@ -66,15 +66,15 @@
     "description": "The integer ring Z and its basic properties",
     "category": "undergraduate_prerequisite",
     "used_by": [
-      "Lecture1/Introduction",
-      "Lecture1/Definition1.7",
-      "Lecture1/Discussion_after_1.6",
-      "Lecture1/Example1.14",
-      "Lecture1/Proposition1.22",
-      "Lecture1/Corollary1.23",
-      "Lecture1/Example1.24",
-      "Lecture1/Definition1.26",
-      "Lecture1/Example1.29"
+      "Lecture1/01.00.Introduction",
+      "Lecture1/01.07.Definition",
+      "Lecture1/01.06a.Discussion",
+      "Lecture1/01.14.Example",
+      "Lecture1/01.22.Proposition",
+      "Lecture1/01.23.Corollary",
+      "Lecture1/01.24.Example",
+      "Lecture1/01.26.Definition",
+      "Lecture1/01.29.Example"
     ]
   },
   {
@@ -82,13 +82,13 @@
     "description": "The field Q of rational numbers as fraction field of Z",
     "category": "undergraduate_prerequisite",
     "used_by": [
-      "Lecture1/Introduction",
-      "Lecture1/Discussion_after_1.6",
-      "Lecture1/Definition1.7",
-      "Lecture1/Theorem1.8",
-      "Lecture1/Theorem1.9",
-      "Lecture1/Proposition1.22",
-      "Lecture1/Definition1.26"
+      "Lecture1/01.00.Introduction",
+      "Lecture1/01.06a.Discussion",
+      "Lecture1/01.07.Definition",
+      "Lecture1/01.08.Theorem",
+      "Lecture1/01.09.Theorem",
+      "Lecture1/01.22.Proposition",
+      "Lecture1/01.26.Definition"
     ]
   },
   {
@@ -96,10 +96,10 @@
     "description": "The real numbers R, R_{>=0}, R_{>0}, and the standard ordering on R",
     "category": "undergraduate_prerequisite",
     "used_by": [
-      "Lecture1/Definition1.2",
-      "Lecture1/Example1.3",
-      "Lecture1/Definition1.6",
-      "Lecture1/Definition1.10"
+      "Lecture1/01.02.Definition",
+      "Lecture1/01.03.Example",
+      "Lecture1/01.06.Definition",
+      "Lecture1/01.10.Definition"
     ]
   },
   {
@@ -107,11 +107,11 @@
     "description": "Prime numbers, divisibility in Z, coprime integers",
     "category": "undergraduate_prerequisite",
     "used_by": [
-      "Lecture1/Introduction",
-      "Lecture1/Definition1.7",
-      "Lecture1/Discussion_after_1.6",
-      "Lecture1/Example1.14",
-      "Lecture1/Proposition1.22"
+      "Lecture1/01.00.Introduction",
+      "Lecture1/01.07.Definition",
+      "Lecture1/01.06a.Discussion",
+      "Lecture1/01.14.Example",
+      "Lecture1/01.22.Proposition"
     ]
   },
   {
@@ -119,9 +119,9 @@
     "description": "Every nonzero integer has a unique prime factorization (up to units)",
     "category": "undergraduate_prerequisite",
     "used_by": [
-      "Lecture1/Introduction",
-      "Lecture1/Definition1.7",
-      "Lecture1/Discussion_after_1.6"
+      "Lecture1/01.00.Introduction",
+      "Lecture1/01.07.Definition",
+      "Lecture1/01.06a.Discussion"
     ]
   },
   {
@@ -129,9 +129,9 @@
     "description": "Finite fields F_p and F_q, existence and uniqueness up to isomorphism",
     "category": "undergraduate_prerequisite",
     "used_by": [
-      "Lecture1/Introduction",
-      "Lecture1/Corollary1.5",
-      "Lecture1/Example1.14"
+      "Lecture1/01.00.Introduction",
+      "Lecture1/01.05.Corollary",
+      "Lecture1/01.14.Example"
     ]
   },
   {
@@ -139,15 +139,15 @@
     "description": "Polynomial rings A[x], monic polynomials, irreducible polynomials, minimal polynomials",
     "category": "undergraduate_prerequisite",
     "used_by": [
-      "Lecture1/Introduction",
-      "Lecture1/Definition1.17",
-      "Lecture1/Proposition1.18",
-      "Lecture1/Definition1.19",
-      "Lecture1/Proposition1.22",
-      "Lecture1/Example1.24",
-      "Lecture1/Proposition1.25",
-      "Lecture1/Proposition1.28",
-      "Lecture1/Example1.29"
+      "Lecture1/01.00.Introduction",
+      "Lecture1/01.17.Definition",
+      "Lecture1/01.18.Proposition",
+      "Lecture1/01.19.Definition",
+      "Lecture1/01.22.Proposition",
+      "Lecture1/01.24.Example",
+      "Lecture1/01.25.Proposition",
+      "Lecture1/01.28.Proposition",
+      "Lecture1/01.29.Example"
     ]
   },
   {
@@ -155,14 +155,14 @@
     "description": "Fraction field (field of fractions) of an integral domain",
     "category": "undergraduate_prerequisite",
     "used_by": [
-      "Lecture1/Introduction",
-      "Lecture1/Definition1.10",
-      "Lecture1/Definition1.11",
-      "Lecture1/Discussion_after_1.13",
-      "Lecture1/Discussion_after_1.15",
-      "Lecture1/Definition1.19",
-      "Lecture1/Proposition1.25",
-      "Lecture1/Proposition1.28"
+      "Lecture1/01.00.Introduction",
+      "Lecture1/01.10.Definition",
+      "Lecture1/01.11.Definition",
+      "Lecture1/01.13a.Discussion",
+      "Lecture1/01.15a.Discussion",
+      "Lecture1/01.19.Definition",
+      "Lecture1/01.25.Proposition",
+      "Lecture1/01.28.Proposition"
     ]
   },
   {
@@ -170,10 +170,10 @@
     "description": "Principal ideal domains: every ideal is generated by a single element",
     "category": "undergraduate_prerequisite",
     "used_by": [
-      "Lecture1/Introduction",
-      "Lecture1/Definition1.11",
-      "Lecture1/Theorem1.16",
-      "Lecture1/Corollary1.23"
+      "Lecture1/01.00.Introduction",
+      "Lecture1/01.11.Definition",
+      "Lecture1/01.16.Theorem",
+      "Lecture1/01.23.Corollary"
     ]
   },
   {
@@ -181,9 +181,9 @@
     "description": "Unique factorization domains",
     "category": "undergraduate_prerequisite",
     "used_by": [
-      "Lecture1/Definition1.11",
-      "Lecture1/Corollary1.23",
-      "Lecture1/Example1.24"
+      "Lecture1/01.11.Definition",
+      "Lecture1/01.23.Corollary",
+      "Lecture1/01.24.Example"
     ]
   },
   {
@@ -191,8 +191,8 @@
     "description": "Noetherian rings: every ideal is finitely generated, ascending chain condition",
     "category": "undergraduate_prerequisite",
     "used_by": [
-      "Lecture1/Discussion_after_1.13",
-      "Lecture1/Theorem1.16"
+      "Lecture1/01.13a.Discussion",
+      "Lecture1/01.16.Theorem"
     ]
   },
   {
@@ -200,9 +200,9 @@
     "description": "Krull dimension of a ring (supremum of lengths of chains of prime ideals)",
     "category": "undergraduate_prerequisite",
     "used_by": [
-      "Lecture1/Introduction",
-      "Lecture1/Discussion_after_1.13",
-      "Lecture1/Theorem1.16"
+      "Lecture1/01.00.Introduction",
+      "Lecture1/01.13a.Discussion",
+      "Lecture1/01.16.Theorem"
     ]
   },
   {
@@ -210,8 +210,8 @@
     "description": "Localization of a ring at a prime ideal",
     "category": "undergraduate_prerequisite",
     "used_by": [
-      "Lecture1/Example1.14",
-      "Lecture1/Theorem1.16"
+      "Lecture1/01.14.Example",
+      "Lecture1/01.16.Theorem"
     ]
   },
   {
@@ -219,7 +219,7 @@
     "description": "Group homomorphisms (used for valuations as homomorphisms k* -> R)",
     "category": "undergraduate_prerequisite",
     "used_by": [
-      "Lecture1/Definition1.10"
+      "Lecture1/01.10.Definition"
     ]
   },
   {
@@ -227,7 +227,7 @@
     "description": "Power series ring k[[t]] and Laurent series field k((t))",
     "category": "undergraduate_prerequisite",
     "used_by": [
-      "Lecture1/Example1.15"
+      "Lecture1/01.15.Example"
     ]
   },
   {
@@ -235,8 +235,8 @@
     "description": "Existence of algebraic closure of a field, field embeddings",
     "category": "undergraduate_prerequisite",
     "used_by": [
-      "Lecture1/Proposition1.18",
-      "Lecture1/Proposition1.28"
+      "Lecture1/01.18.Proposition",
+      "Lecture1/01.28.Proposition"
     ]
   },
   {
@@ -244,9 +244,9 @@
     "description": "Finite field extensions, algebraic extensions, degree of extension",
     "category": "undergraduate_prerequisite",
     "used_by": [
-      "Lecture1/Introduction",
-      "Lecture1/Definition1.26",
-      "Lecture1/Proposition1.28"
+      "Lecture1/01.00.Introduction",
+      "Lecture1/01.26.Definition",
+      "Lecture1/01.28.Proposition"
     ]
   },
   {
@@ -254,7 +254,7 @@
     "description": "Symmetric functions of roots: coefficients of a polynomial are symmetric functions of its roots",
     "category": "undergraduate_prerequisite",
     "used_by": [
-      "Lecture1/Proposition1.18"
+      "Lecture1/01.18.Proposition"
     ]
   },
   {
@@ -262,7 +262,7 @@
     "description": "Free Z-modules, Z-lattices in a Q-vector space",
     "category": "undergraduate_prerequisite",
     "used_by": [
-      "Lecture1/Remark1.27"
+      "Lecture1/01.27.Remark"
     ]
   },
   {
@@ -270,8 +270,8 @@
     "description": "Regular local rings (dim m/m^2 = dim A)",
     "category": "undergraduate_prerequisite",
     "used_by": [
-      "Lecture1/Discussion_after_1.13",
-      "Lecture1/Theorem1.16"
+      "Lecture1/01.13a.Discussion",
+      "Lecture1/01.16.Theorem"
     ]
   },
   {
@@ -279,8 +279,8 @@
     "description": "Vector spaces over a field, dimension",
     "category": "undergraduate_prerequisite",
     "used_by": [
-      "Lecture1/Discussion_after_1.13",
-      "Lecture1/Remark1.27"
+      "Lecture1/01.13a.Discussion",
+      "Lecture1/01.27.Remark"
     ]
   },
   {
@@ -288,7 +288,7 @@
     "description": "The triangle inequality for real-valued functions",
     "category": "undergraduate_prerequisite",
     "used_by": [
-      "Lecture1/Definition1.2"
+      "Lecture1/01.02.Definition"
     ]
   },
   {
@@ -296,8 +296,8 @@
     "description": "If r/s in lowest terms is a root of a monic polynomial in Z[x], then s = +-1",
     "category": "external_result",
     "used_by": [
-      "Lecture1/Proposition1.22",
-      "Lecture1/Corollary1.23"
+      "Lecture1/01.22.Proposition",
+      "Lecture1/01.23.Corollary"
     ]
   },
   {
@@ -305,7 +305,7 @@
     "description": "Every discrete subgroup of R is isomorphic to Z",
     "category": "folklore",
     "used_by": [
-      "Lecture1/Definition1.10"
+      "Lecture1/01.10.Definition"
     ]
   },
   {
@@ -313,7 +313,7 @@
     "description": "Z is a principal ideal domain",
     "category": "folklore",
     "used_by": [
-      "Lecture1/Introduction"
+      "Lecture1/01.00.Introduction"
     ]
   },
   {
@@ -321,7 +321,7 @@
     "description": "F_q[t] is a principal ideal domain",
     "category": "folklore",
     "used_by": [
-      "Lecture1/Introduction"
+      "Lecture1/01.00.Introduction"
     ]
   },
   {
@@ -329,7 +329,7 @@
     "description": "Every field contains exactly one prime field (Q or F_p) according to its characteristic",
     "category": "folklore",
     "used_by": [
-      "Lecture1/Introduction"
+      "Lecture1/01.00.Introduction"
     ]
   },
   {
@@ -337,7 +337,7 @@
     "description": "Z has Krull dimension one",
     "category": "folklore",
     "used_by": [
-      "Lecture1/Introduction"
+      "Lecture1/01.00.Introduction"
     ]
   },
   {
@@ -345,15 +345,15 @@
     "description": "Riemann zeta function: Euler product, analytic continuation, simple pole at s=1",
     "category": "external_result",
     "used_by": [
-      "Lecture1/Introduction"
+      "Lecture1/01.00.Introduction"
     ]
   },
   {
     "id": "ext/dvr-characterizations-proof",
-    "description": "Proof of equivalent characterizations of DVRs (references [1, §23] or [2, §9])",
+    "description": "Proof of equivalent characterizations of DVRs (references [1, \u00a723] or [2, \u00a79])",
     "category": "external_result",
     "used_by": [
-      "Lecture1/Theorem1.16"
+      "Lecture1/01.16.Theorem"
     ]
   },
   {
@@ -361,7 +361,7 @@
     "description": "Proof that integrality is transitive in ring extension towers (references [1, Thm. 10.27] or [2, Cor. 5.4])",
     "category": "external_result",
     "used_by": [
-      "Lecture1/Proposition1.20"
+      "Lecture1/01.20.Proposition"
     ]
   }
 ]

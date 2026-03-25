@@ -1,292 +1,292 @@
 [
   {
-    "id": "Lecture1/Introduction",
+    "id": "Lecture1/01.00.Introduction",
     "type": "introduction",
     "status": "not_applicable",
     "lean_file": "",
     "aristotle_project_id": ""
   },
   {
-    "id": "Lecture1/Remark1.1",
+    "id": "Lecture1/01.01.Remark",
     "type": "remark",
     "status": "not_applicable",
     "lean_file": "",
     "aristotle_project_id": ""
   },
   {
-    "id": "Lecture1/Discussion_after_1.1",
+    "id": "Lecture1/01.01a.Discussion",
     "type": "discussion",
     "status": "not_applicable",
     "lean_file": "",
     "aristotle_project_id": ""
   },
   {
-    "id": "Lecture1/Definition1.2",
+    "id": "Lecture1/01.02.Definition",
     "type": "definition",
     "status": "proof_polished",
-    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Definition1_2.lean",
+    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/01_02_Definition.lean",
     "aristotle_project_id": "",
     "upstreaming_status": "rejected"
   },
   {
-    "id": "Lecture1/Example1.3",
+    "id": "Lecture1/01.03.Example",
     "type": "example",
     "status": "proof_polished",
-    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Example1_3.lean",
+    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/01_03_Example.lean",
     "aristotle_project_id": "",
     "upstreaming_status": "mathlib_covered"
   },
   {
-    "id": "Lecture1/Lemma1.4",
+    "id": "Lecture1/01.04.Lemma",
     "type": "lemma",
     "status": "proof_polished",
-    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Lemma1_4.lean",
+    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/01_04_Lemma.lean",
     "aristotle_project_id": "",
     "upstreaming_status": "candidate"
   },
   {
-    "id": "Lecture1/Corollary1.5",
+    "id": "Lecture1/01.05.Corollary",
     "type": "corollary",
     "status": "proof_polished",
-    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Corollary1_5.lean",
+    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/01_05_Corollary.lean",
     "aristotle_project_id": "",
     "upstreaming_status": "candidate"
   },
   {
-    "id": "Lecture1/Definition1.6",
+    "id": "Lecture1/01.06.Definition",
     "type": "definition",
     "status": "proof_polished",
-    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Definition1_6.lean",
+    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/01_06_Definition.lean",
     "aristotle_project_id": "",
     "upstreaming_status": "rejected"
   },
   {
-    "id": "Lecture1/Discussion_after_1.6",
+    "id": "Lecture1/01.06a.Discussion",
     "type": "discussion",
     "status": "not_applicable",
     "lean_file": "",
     "aristotle_project_id": ""
   },
   {
-    "id": "Lecture1/Definition1.7",
+    "id": "Lecture1/01.07.Definition",
     "type": "definition",
     "status": "proof_polished",
-    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Definition1_7.lean",
+    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/01_07_Definition.lean",
     "aristotle_project_id": "",
     "upstreaming_status": "rejected"
   },
   {
-    "id": "Lecture1/Theorem1.8",
+    "id": "Lecture1/01.08.Theorem",
     "type": "theorem",
     "status": "proof_polished",
-    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Theorem1_8.lean",
+    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/01_08_Theorem.lean",
     "aristotle_project_id": "",
     "upstreaming_status": "rejected"
   },
   {
-    "id": "Lecture1/Theorem1.9",
+    "id": "Lecture1/01.09.Theorem",
     "type": "theorem",
     "status": "proof_polished",
-    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Theorem1_9.lean",
+    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/01_09_Theorem.lean",
     "aristotle_project_id": "",
     "upstreaming_status": "candidate"
   },
   {
-    "id": "Lecture1/Discussion_after_1.9",
+    "id": "Lecture1/01.09a.Discussion",
     "type": "discussion",
     "status": "not_applicable",
     "lean_file": "",
     "aristotle_project_id": ""
   },
   {
-    "id": "Lecture1/Definition1.10",
+    "id": "Lecture1/01.10.Definition",
     "type": "definition",
     "status": "proof_polished",
-    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Definition1_10.lean",
+    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/01_10_Definition.lean",
     "aristotle_project_id": "",
     "upstreaming_status": "rejected"
   },
   {
-    "id": "Lecture1/Definition1.11",
+    "id": "Lecture1/01.11.Definition",
     "type": "definition",
     "status": "proof_polished",
-    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Definition1_11.lean",
+    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/01_11_Definition.lean",
     "aristotle_project_id": "",
     "upstreaming_status": "rejected"
   },
   {
-    "id": "Lecture1/Definition1.12",
+    "id": "Lecture1/01.12.Definition",
     "type": "definition",
     "status": "proof_polished",
-    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Definition1_12.lean",
+    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/01_12_Definition.lean",
     "aristotle_project_id": "",
     "upstreaming_status": "rejected"
   },
   {
-    "id": "Lecture1/Definition1.13",
+    "id": "Lecture1/01.13.Definition",
     "type": "definition",
     "status": "proof_polished",
-    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Definition1_13.lean",
+    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/01_13_Definition.lean",
     "aristotle_project_id": "",
     "upstreaming_status": "rejected"
   },
   {
-    "id": "Lecture1/Discussion_after_1.13",
+    "id": "Lecture1/01.13a.Discussion",
     "type": "discussion",
     "status": "not_applicable",
     "lean_file": "",
     "aristotle_project_id": ""
   },
   {
-    "id": "Lecture1/Example1.14",
+    "id": "Lecture1/01.14.Example",
     "type": "example",
     "status": "proof_polished",
-    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Example1_14.lean",
+    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/01_14_Example.lean",
     "aristotle_project_id": "",
     "upstreaming_status": "mathlib_covered"
   },
   {
-    "id": "Lecture1/Example1.15",
+    "id": "Lecture1/01.15.Example",
     "type": "example",
     "status": "proof_polished",
-    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Example1_15.lean",
+    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/01_15_Example.lean",
     "aristotle_project_id": "",
     "upstreaming_status": "rejected"
   },
   {
-    "id": "Lecture1/Discussion_after_1.15",
+    "id": "Lecture1/01.15a.Discussion",
     "type": "discussion",
     "status": "not_applicable",
     "lean_file": "",
     "aristotle_project_id": ""
   },
   {
-    "id": "Lecture1/Theorem1.16",
+    "id": "Lecture1/01.16.Theorem",
     "type": "theorem",
     "status": "proof_polished",
-    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Theorem1_16.lean",
+    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/01_16_Theorem.lean",
     "aristotle_project_id": "",
     "upstreaming_status": "rejected"
   },
   {
-    "id": "Lecture1/Discussion_after_1.16",
+    "id": "Lecture1/01.16a.Discussion",
     "type": "discussion",
     "status": "not_applicable",
     "lean_file": "",
     "aristotle_project_id": ""
   },
   {
-    "id": "Lecture1/Definition1.17",
+    "id": "Lecture1/01.17.Definition",
     "type": "definition",
     "status": "proof_polished",
-    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Definition1_17.lean",
+    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/01_17_Definition.lean",
     "aristotle_project_id": "",
     "upstreaming_status": "rejected"
   },
   {
-    "id": "Lecture1/Proposition1.18",
+    "id": "Lecture1/01.18.Proposition",
     "type": "proposition",
     "status": "proof_polished",
-    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Proposition1_18.lean",
+    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/01_18_Proposition.lean",
     "aristotle_project_id": "",
     "upstreaming_status": "rejected"
   },
   {
-    "id": "Lecture1/Definition1.19",
+    "id": "Lecture1/01.19.Definition",
     "type": "definition",
     "status": "proof_polished",
-    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Definition1_19.lean",
+    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/01_19_Definition.lean",
     "aristotle_project_id": "",
     "upstreaming_status": "rejected"
   },
   {
-    "id": "Lecture1/Proposition1.20",
+    "id": "Lecture1/01.20.Proposition",
     "type": "proposition",
     "status": "proof_polished",
-    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Proposition1_20.lean",
+    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/01_20_Proposition.lean",
     "aristotle_project_id": "",
     "upstreaming_status": "rejected"
   },
   {
-    "id": "Lecture1/Corollary1.21",
+    "id": "Lecture1/01.21.Corollary",
     "type": "corollary",
     "status": "proof_polished",
-    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Corollary1_21.lean",
+    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/01_21_Corollary.lean",
     "aristotle_project_id": "",
     "upstreaming_status": "rejected"
   },
   {
-    "id": "Lecture1/Proposition1.22",
+    "id": "Lecture1/01.22.Proposition",
     "type": "proposition",
     "status": "proof_polished",
-    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Proposition1_22.lean",
+    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/01_22_Proposition.lean",
     "aristotle_project_id": "",
     "upstreaming_status": "rejected"
   },
   {
-    "id": "Lecture1/Corollary1.23",
+    "id": "Lecture1/01.23.Corollary",
     "type": "corollary",
     "status": "proof_polished",
-    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Corollary1_23.lean",
+    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/01_23_Corollary.lean",
     "aristotle_project_id": "",
     "upstreaming_status": "rejected"
   },
   {
-    "id": "Lecture1/Example1.24",
+    "id": "Lecture1/01.24.Example",
     "type": "example",
     "status": "proof_polished",
-    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Example1_24.lean",
+    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/01_24_Example.lean",
     "aristotle_project_id": "",
     "upstreaming_status": "candidate"
   },
   {
-    "id": "Lecture1/Proposition1.25",
+    "id": "Lecture1/01.25.Proposition",
     "type": "proposition",
     "status": "proof_polished",
-    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Proposition1_25.lean",
+    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/01_25_Proposition.lean",
     "aristotle_project_id": "",
     "upstreaming_status": "rejected"
   },
   {
-    "id": "Lecture1/Definition1.26",
+    "id": "Lecture1/01.26.Definition",
     "type": "definition",
     "status": "proof_polished",
-    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Definition1_26.lean",
+    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/01_02_Definition6.lean",
     "aristotle_project_id": "",
     "upstreaming_status": "rejected"
   },
   {
-    "id": "Lecture1/Remark1.27",
+    "id": "Lecture1/01.27.Remark",
     "type": "remark",
     "status": "not_applicable",
     "lean_file": "",
     "aristotle_project_id": ""
   },
   {
-    "id": "Lecture1/Proposition1.28",
+    "id": "Lecture1/01.28.Proposition",
     "type": "proposition",
     "status": "proof_polished",
-    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Proposition1_28.lean",
+    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/01_28_Proposition.lean",
     "aristotle_project_id": "",
     "upstreaming_status": "mathlib_covered"
   },
   {
-    "id": "Lecture1/Example1.29",
+    "id": "Lecture1/01.29.Example",
     "type": "example",
     "status": "proof_polished",
-    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/Example1_29.lean",
+    "lean_file": "SutherlandNumberTheoryLecture1/Chapter1/01_29_Example.lean",
     "aristotle_project_id": "",
     "upstreaming_status": "candidate"
   },
   {
-    "id": "Lecture1/References",
+    "id": "Lecture1/01.99.References",
     "type": "bibliography",
     "status": "not_applicable",
     "lean_file": "",
     "aristotle_project_id": ""
   },
   {
-    "id": "Lecture1/Backmatter",
+    "id": "Lecture1/01.99a.Discussion",
     "type": "discussion",
     "status": "not_applicable",
     "lean_file": "",

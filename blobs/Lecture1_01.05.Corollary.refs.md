@@ -1,4 +1,4 @@
-# References for Lecture1/Corollary1.5
+# References for Lecture1/01.05.Corollary
 
 ## Mathlib Coverage
 

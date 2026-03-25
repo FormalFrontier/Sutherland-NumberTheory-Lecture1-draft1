@@ -1,4 +1,4 @@
-# References for Lecture1/Theorem1.16
+# References for Lecture1/01.16.Theorem
 
 ## Mathlib Coverage
 

@@ -1,4 +1,4 @@
-# References for Lecture1/Theorem1.9
+# References for Lecture1/01.09.Theorem
 
 ## External Dependencies
 

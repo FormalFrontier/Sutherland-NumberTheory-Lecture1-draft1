@@ -2,7 +2,7 @@ import Mathlib.Analysis.Normed.Field.Basic
 import Mathlib.Algebra.CharP.Defs
 import Mathlib.Algebra.CharP.Frobenius
 import Mathlib.GroupTheory.OrderOfElement
-import SutherlandNumberTheoryLecture1.Chapter1.Lemma1_4
+import SutherlandNumberTheoryLecture1.Chapter1.«01_04_Lemma»
 
 /-!
 # Corollary 1.5: Positive Characteristic Implies Nonarchimedean

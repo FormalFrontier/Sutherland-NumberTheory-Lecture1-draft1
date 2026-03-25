@@ -1,4 +1,4 @@
-# References for Lecture1/Example1.24
+# References for Lecture1/01.24.Example
 
 ## External Dependencies
 
