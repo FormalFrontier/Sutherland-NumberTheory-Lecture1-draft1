@@ -215,9 +215,9 @@ All 27 formalizable items are proof-polished (sorry-free, lint-clean, Mathlib-qu
 | Total items in book | 38 |
 | Formalizable items | 27 |
 | Proof-polished proofs | 27/27 (100%) |
-| Merged PRs | 61 |
-| Issues created | 73 |
-| Issues closed | 71 |
+| Merged PRs | 64 |
+| Issues created | 77 |
+| Issues closed | 75 |
 | Aristotle escalations | 0 |
 | Project duration | 2 days (2026-03-16 to 2026-03-17) |
 
@@ -225,11 +225,11 @@ All 27 formalizable items are proof-polished (sorry-free, lint-clean, Mathlib-qu
 
 | Type | Count |
 |------|-------|
-| Feature (implementation) | 29 |
-| Review (quality assurance) | 14 |
+| Feature (implementation) | 36 |
+| Review (quality assurance) | 19 |
 | Transcription | 9 |
-| Summarize (progress analysis) | 5 |
-| Meditate (self-improvement) | 3 |
+| Summarize (progress analysis) | 6 |
+| Meditate (self-improvement) | 4 |
 
 ### Proof strategy distribution
 
@@ -320,6 +320,9 @@ All 27 formalizable items are proof-polished (sorry-free, lint-clean, Mathlib-qu
 | #133 | review: verify Proposition 1.28 Mathlib delegation refactor | QA |
 | #134 | review: verify Theorem 1.9 and 1.16 match PDF | QA |
 | #135 | review: Stage 3.4 completion gate | QA |
+| #137 | Summarize: Stage 3.4/3.5 progress and final cleanup phase | Summary |
+| #138 | Meditate: Cleanup phase skill extraction — proof polish and Mathlib delegation | Skills |
+| #140 | Update FormalFrontier templates | Infra |
 
 ## Infrastructure and Skills
 
@@ -339,6 +342,9 @@ All 27 formalizable items are proof-polished (sorry-free, lint-clean, Mathlib-qu
 - `lean-proof-strategies` — strategies for filling sorry placeholders
 - `mathlib-api-lookup` — searching for Mathlib declarations
 - `aristotle-escalation` — automated theorem prover escalation
+- `proof-polish` — Stage 3.4 proof polishing methodology
+- `mathlib-delegation` — when and how to delegate proofs to Mathlib
+- `formalization-velocity` — quantitative insights on formalization speed
 - `project-retrospective` — transferable lessons from this formalization
 
 ## Known Limitations
